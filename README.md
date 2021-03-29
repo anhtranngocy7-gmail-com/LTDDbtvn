@@ -1,3 +1,7 @@
+# Quy định đặt tên branch
+- nhom3_tên
+**Ví dụ:** nhom3_anh
+
 # Design lại các giao diện giao bằng xml
 **Target:**
 - Welcome: Bình
