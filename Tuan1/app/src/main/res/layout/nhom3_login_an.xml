@@ -13,7 +13,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="710dp"
-        android:src="@drawable/Ellipse127"
+        android:src="@drawable/aelipse127"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -24,7 +24,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="280dp"
         android:layout_marginBottom="700dp"
-        android:src="@drawable/Ellipse128"
+        android:src="@drawable/aellipse128"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -35,7 +35,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="330dp"
         android:layout_marginBottom="705dp"
-        android:src="@drawable/Ellipse126"
+        android:src="@drawable/aellipse126"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -45,7 +45,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="710dp"
-        android:src="@drawable/Ellipse127"
+        android:src="@drawable/aelipse127"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -253,7 +253,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/Group17863"
+                android:src="@drawable/agroup17863"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"></ImageView>
@@ -276,7 +276,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:src="@drawable/Group17955"
+        android:src="@drawable/agroup17955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
