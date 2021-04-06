@@ -118,6 +118,11 @@
             android:layout_width="match_parent"
             android:layout_height="80dp">
             <TextView
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:text="ronaldo@gmail.com"
                 android:layout_margin="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
@@ -126,7 +131,7 @@
             </TextView>
         </LinearLayout>
         <TextView
-            android:layout_marginTop="20dp"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone Number"
@@ -138,6 +143,11 @@
             android:layout_width="match_parent"
             android:layout_height="80dp">
             <TextView
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:paddingHorizontal="10dp"
+                android:gravity="center_vertical"
+                android:text="+03948000834"
                 android:layout_margin="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
