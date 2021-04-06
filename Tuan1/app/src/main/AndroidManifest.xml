@@ -9,9 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
+<<<<<<< HEAD
         <activity android:name=".Onboarding2"></activity>
         <activity android:name=".Splash" />
         <activity android:name=".Welcome" />
+=======
+        <activity android:name=".Onboardingthree"></activity>
+>>>>>>> b3a5121c9967ed88e0cff859097e6097df57b9a4
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
