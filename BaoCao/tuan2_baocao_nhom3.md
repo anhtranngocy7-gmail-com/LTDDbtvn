@@ -20,3 +20,5 @@
 ![Onboarding3](https://github.com/anhtranngocy7-gmail-com/LTDDbtvn/blob/nhom3_quoc/HinhAnh/Group%20arrow.png)  
 3.Onboarding3 complete  
 ![Onboarding3](https://github.com/anhtranngocy7-gmail-com/LTDDbtvn/blob/nhom3_quoc/HinhAnh/complete.png)  
+#FLOWAPP_SPLASH_ONBOARDING_WELCOME_DAT
+https://www.youtube.com/watch?v=_RsZePkC39Q
