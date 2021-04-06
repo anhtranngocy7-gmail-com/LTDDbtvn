@@ -8,6 +8,7 @@
     android:background="#F8F8F8">
 
     <ImageView
+        android:id="@+id/imageView7"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_alignParentEnd="true"
@@ -17,127 +18,136 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <ImageView
+        android:layout_marginBottom="70dp"
         android:layout_width="240dp"
         android:layout_height="240dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="280dp"
-        android:layout_marginBottom="700dp"
+        android:layout_marginStart="80dp"
         android:src="@drawable/aellipse128"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintStart_toEndOf="@+id/imageView6" />
 
     <ImageView
         android:layout_width="123dp"
         android:layout_height="123dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="330dp"
-        android:layout_marginBottom="705dp"
+        android:layout_marginEnd="328dp"
+        android:layout_marginBottom="60dp"
         android:src="@drawable/aellipse126"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
+        android:id="@+id/imageView6"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="710dp"
+        android:layout_marginBottom="64dp"
         android:src="@drawable/aelipse127"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintStart_toStartOf="parent" />
 
-
-
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
         android:background="@android:color/transparent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:orientation="vertical">
+        app:layout_constraintVertical_bias="0.91">
+
         <TextView
-            android:textColor="@color/black"
-            android:padding="0dp"
-            android:layout_marginStart="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="30dp"
+            android:padding="0dp"
             android:text="Login"
-            android:textSize="36sp"
-            android:layout_marginBottom="30dp"></TextView>
+            android:textColor="@color/black"
+            android:textSize="36sp"></TextView>
+
         <TextView
-            android:textColor="#9796A1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="E-mail"
+            android:textColor="#9796A1"
             android:textSize="16sp">
 
         </TextView>
+
         <EditText
-            android:textSize="17sp"
-            android:paddingStart="20dp"
+            android:id="@+id/et_email_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
             android:background="@drawable/inputbackground"
-            android:paddingVertical="20dp"
             android:ems="16"
             android:hint="Your email or phone"
             android:inputType="textEmailAddress"
+            android:paddingVertical="20dp"
+            android:paddingStart="20dp"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="25dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
-            android:textColor="#9796A1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:text="Password"
+            android:textColor="#9796A1"
             android:textSize="16sp">
 
         </TextView>
+
         <EditText
-            android:textSize="17sp"
-            android:paddingStart="20dp"
+            android:id="@+id/et_pass_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/inputbackground"
-            android:paddingVertical="20dp"
             android:ems="16"
             android:hint="Password"
             android:inputType="textEmailAddress"
+            android:paddingVertical="20dp"
+            android:paddingStart="20dp"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="20dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           >
+            android:layout_height="wrap_content">
 
             <TextView
-                android:textColor="#FE724C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="35dp"
                 android:text="Forgot password?"
+                android:textColor="#FE724C"
                 android:textSize="14sp"
-                app:layout_constraintBottom_toTopOf="@+id/button"
+                app:layout_constraintBottom_toTopOf="@+id/btn_login"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginBottom="35dp"></TextView>
+                app:layout_constraintStart_toStartOf="parent"></TextView>
 
             <Button
-                android:paddingVertical="20dp"
-                android:id="@+id/button"
+                android:id="@+id/btn_login"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/white"
                 android:background="@drawable/buttonbackground"
+                android:paddingVertical="20dp"
                 android:text="Login"
+                android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
@@ -146,10 +156,11 @@
 
 
         </android.support.constraint.ConstraintLayout>
+
         <android.support.constraint.ConstraintLayout
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -206,76 +217,77 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"></android.support.constraint.ConstraintLayout>
         </android.support.constraint.ConstraintLayout>
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/x"
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-     >
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="135dp"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:background="@drawable/buttonwhite"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-            <ImageView
-                android:layout_marginStart="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/superg"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></ImageView>
+            android:id="@+id/x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
-            <TextView
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="10dp"
-                android:text="GOOGLE"
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:background="@drawable/buttonwhite"
+                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/superg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="GOOGLE"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="135dp"
+                android:layout_height="50dp"
+                android:background="@drawable/buttonwhite"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/agroup17863"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="FACEBOOK"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+            </android.support.constraint.ConstraintLayout>
         </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:orientation="horizontal"
-            android:layout_width="135dp"
-            android:layout_height="50dp"
-            android:background="@drawable/buttonwhite"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <ImageView
-                android:layout_marginStart="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/agroup17863"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-            <TextView
-                android:layout_marginEnd="10dp"
-                android:textColor="@color/black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FACEBOOK"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"></TextView>
-        </android.support.constraint.ConstraintLayout>
-    </android.support.constraint.ConstraintLayout>
     </LinearLayout>
 
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
         android:src="@drawable/agroup17955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
