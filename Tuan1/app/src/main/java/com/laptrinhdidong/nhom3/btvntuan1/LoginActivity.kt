@@ -15,9 +15,17 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener{
             if(et_email_login.text.toString()=="ronaldo@gmail.com"&&et_pass_login.text.toString()=="123456")
             {
-                var intent: Intent =Intent(this@LoginActivity,MainActivity::class.java)
+                val intent = Intent(this@LoginActivity,ProfileActivity::class.java)
+                val bundle = Bundle()
+                val userInformation = UserInformation(email = et_email_login.text.toString(), fullName = "Cristiano Ronaldo", phoneNumber = "+ 0399 371 485")
+                bundle.putParcelable("userInformation", userInformation )
+                intent.putExtras(bundle)
                 startActivity(intent)
             }
         }
     }
+
+
 }
+
+
