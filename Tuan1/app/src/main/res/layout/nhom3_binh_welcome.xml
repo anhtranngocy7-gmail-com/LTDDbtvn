@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/binh_background_welcome"
+    android:background="@drawable/test"
     tools:context=".MainActivity">
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
@@ -21,7 +21,7 @@
         android:layout_marginRight="30dp"
         android:layout_marginBottom="514dp"
 
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/sofia_pro_semi_bold"
         android:text="Welcome to"
         android:textColor="#111719"
         android:textSize="53sp"
@@ -37,8 +37,8 @@
         android:id="@+id/foodhub"
         android:layout_width="311dp"
         android:layout_height="111dp"
-        android:fontFamily="sans-serif"
-        android:text="FoodHub"
+        android:fontFamily="@font/sofia_pro_semi_bold"
+        android:text="Food Hub"
         android:textColor="#FE724C"
         android:textSize="45sp"
         android:textStyle="bold"
@@ -60,7 +60,7 @@
         android:layout_marginTop="309dp"
         android:layout_marginEnd="79dp"
         android:layout_marginBottom="449dp"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/sofia_pro_regular"
         android:text="Your favourite foods delivered fast at your door"
         android:textSize="18sp"
         android:textStyle="bold"
