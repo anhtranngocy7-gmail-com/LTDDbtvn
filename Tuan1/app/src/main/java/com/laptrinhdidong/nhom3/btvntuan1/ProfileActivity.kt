@@ -21,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
 
         val bundle = intent.extras
         bundle?.let {
-            val userInformation = bundle.getParcelable<UserInformation>("userInformation")
+            val userInformation = bundle.getParcelable<UserInformationData>("userInformation")
             TextviewEmail.text = String.format("%s", userInformation?.email)
             TextviewFullname.text = String.format("%s", userInformation?.fullName)
             TextviewPhonenumber.text = String.format("%s", userInformation?.phoneNumber)

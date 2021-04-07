@@ -3,10 +3,8 @@ package com.laptrinhdidong.nhom3.btvntuan1
 import android.os.Parcel
 import android.os.Parcelable
 
-public class UserInformation(val email: String?, val fullName: String?, val phoneNumber: String?): Parcelable
+public class UserInformationData(val email: String?, val fullName: String?, val phoneNumber: String?): Parcelable
 {
-
-
 
     override fun toString(): String {
         return "UserInformation(email=$email, fullName=$fullName, phoneNumber=$phoneNumber)"
@@ -26,11 +24,11 @@ public class UserInformation(val email: String?, val fullName: String?, val phon
     override fun describeContents(): Int {
         return 0
     }
-    companion object CREATOR : Parcelable.Creator<UserInformation> {
-        override fun createFromParcel(parcel: Parcel): UserInformation {
-            return UserInformation(parcel)
+    companion object CREATOR : Parcelable.Creator<UserInformationData> {
+        override fun createFromParcel(parcel: Parcel): UserInformationData {
+            return UserInformationData(parcel)
         }
-        override fun newArray(size: Int): Array<UserInformation?> {
+        override fun newArray(size: Int): Array<UserInformationData?> {
             return arrayOfNulls(size)
         }
     }

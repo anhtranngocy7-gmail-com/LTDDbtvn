@@ -5,34 +5,40 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MotionEvent
-import kotlinx.android.synthetic.main.nhom3_quoc_onboarding3.*
+import kotlinx.android.synthetic.main.nhom3_binh_onboarding2.view.*
+import kotlinx.android.synthetic.main.nhom3_onboard_dat.*
 
-class Onboardingthree : AppCompatActivity() {
+class OnboardingtwoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.nhom3_quoc_onboarding3)
+        setContentView(R.layout.nhom3_binh_onboarding2)
+
     }
 
     override fun onStart() {
         super.onStart()
-        Log.e("Onboarding3", "Onboarding3 Activity _ onStart")
+        Log.e("Onboarding2", "Onboarding2 Activity _ onStart")
 
 //        val timer = object : CountDownTimer(3000, 1000){
 //            override fun onTick(millisUntilFinished: Long) {
-//                Log.e("Onboarding3", "Onboarding3 Activity _ onStart")
+//                Log.e("Onboarding2", "Onboarding2 Activity _ onStart")
 //            }
 //
 //            override fun onFinish() {
-//                val intent = Intent(this@Onboardingthree, Welcome::class.java)
+//                val intent = Intent(this@Onboarding2, Onboardingthree::class.java)
 //                startActivity(intent)
 //            }
 //        }
 //        timer.start()
     }
 
+    override fun onResume() {
+        super.onResume()
+        Log.e("Onboarding2", "Onboarding2 Activity _ onResume")
+    }
+
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val intent = Intent(this@Onboardingthree, Welcome::class.java)
+        val intent = Intent(this@OnboardingtwoActivity, OnboardingthreeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
     }
