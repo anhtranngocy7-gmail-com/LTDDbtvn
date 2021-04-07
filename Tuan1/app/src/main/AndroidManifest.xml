@@ -9,13 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
-
-        <activity android:name=".Onboarding2"></activity>
-        <activity android:name=".Splash" />
+        <activity android:name=".Splash"></activity>
+        <activity android:name=".Onboarding2" />
         <activity android:name=".Welcome" />
-=======
-        <activity android:name=".Onboardingthree"></activity>
->>>>>>> b3a5121c9967ed88e0cff859097e6097df57b9a4
+        <activity android:name=".Onboardingthree" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>
