@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MotionEvent
+import android.widget.Button
 import kotlinx.android.synthetic.main.nhom3_binh_onboarding2.view.*
 import kotlinx.android.synthetic.main.nhom3_onboard_dat.*
 
@@ -17,29 +18,19 @@ class OnboardingtwoActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        Log.e("Onboarding2", "Onboarding2 Activity _ onStart")
-
-//        val timer = object : CountDownTimer(3000, 1000){
-//            override fun onTick(millisUntilFinished: Long) {
-//                Log.e("Onboarding2", "Onboarding2 Activity _ onStart")
-//            }
-//
-//            override fun onFinish() {
-//                val intent = Intent(this@Onboarding2, Onboardingthree::class.java)
-//                startActivity(intent)
-//            }
-//        }
-//        timer.start()
+        Log.e("OnboardingtwoActivity", "Onboardingtwo Activity _ onStart")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.e("Onboarding2", "Onboarding2 Activity _ onResume")
+        Log.e("OnboardingtwoActivity", "Onboardingtwo Activity _ onResume")
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
+        Log.e("OnboardingtwoActivity", "Onboardingtwo Activity _ onTouch")
         val intent = Intent(this@OnboardingtwoActivity, OnboardingthreeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
+
     }
 }

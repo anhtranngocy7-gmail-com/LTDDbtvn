@@ -9,31 +9,27 @@ import kotlinx.android.synthetic.main.nhom3_quoc_onboarding3.*
 
 class OnboardingthreeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nhom3_quoc_onboarding3)
+
     }
 
     override fun onStart() {
         super.onStart()
-        Log.e("Onboarding3", "Onboarding3 Activity _ onStart")
+        Log.e("OnboardingthreeActivity", "Onboardingthree Activity _ onStart")
 
-//        val timer = object : CountDownTimer(3000, 1000){
-//            override fun onTick(millisUntilFinished: Long) {
-//                Log.e("Onboarding3", "Onboarding3 Activity _ onStart")
-//            }
-//
-//            override fun onFinish() {
-//                val intent = Intent(this@Onboardingthree, Welcome::class.java)
-//                startActivity(intent)
-//            }
-//        }
-//        timer.start()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.e("OnboardingthreeActivity", "Onboardingthree Activity_ onResume")
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
+        Log.e("OnboardingthreeActivity", "Onboardingthree Activity_ onTouch")
         val intent = Intent(this@OnboardingthreeActivity, WelcomeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
+
     }
 }
