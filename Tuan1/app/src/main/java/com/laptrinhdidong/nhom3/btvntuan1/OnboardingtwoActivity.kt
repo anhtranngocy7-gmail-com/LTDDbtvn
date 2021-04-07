@@ -1,14 +1,14 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.MotionEvent
 import kotlinx.android.synthetic.main.nhom3_binh_onboarding2.view.*
 import kotlinx.android.synthetic.main.nhom3_onboard_dat.*
 
-class Onboarding2Activity : AppCompatActivity() {
+class OnboardingtwoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nhom3_binh_onboarding2)
@@ -38,7 +38,7 @@ class Onboarding2Activity : AppCompatActivity() {
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val intent = Intent(this@Onboarding2Activity, Onboardingthree::class.java)
+        val intent = Intent(this@OnboardingtwoActivity, OnboardingthreeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
     }
