@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 
-class Welcome : AppCompatActivity() {
+class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nhom3_binh_welcome)
