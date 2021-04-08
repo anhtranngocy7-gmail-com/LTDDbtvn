@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.nhom3_binh_splash.view.*
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e("Splash", "Splash Activity _ onCreate")
         setContentView(R.layout.nhom3_binh_splash)
     }
 
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                val intent = Intent(this@MainActivity, OnboardingtwoActivity::class.java)
+                val intent = Intent(this@MainActivity, OnboardingOneActivity::class.java)
                 startActivity(intent)
             }
         }

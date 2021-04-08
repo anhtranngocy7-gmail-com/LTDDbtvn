@@ -1,0 +1,2 @@
+com/laptrinhdidong/nhom3/btvntuan1/BuildConfig.java
+ com.laptrinhdidong.nhom3.btvntuan1.BuildConfig

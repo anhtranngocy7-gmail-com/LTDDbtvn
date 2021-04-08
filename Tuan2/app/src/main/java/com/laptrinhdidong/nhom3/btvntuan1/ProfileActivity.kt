@@ -3,6 +3,7 @@ package com.laptrinhdidong.nhom3.btvntuan1
 import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -14,6 +15,7 @@ class ProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nhom3_an_profile)
+        Log.e("Profile", "Profile Activity _ onCreate")
         val TextviewEmail = findViewById<TextView>(R.id.txt_Email)
         val TextviewFullname = findViewById<TextView>(R.id.txt_Fullname)
         val TextviewPhonenumber = findViewById<TextView>(R.id.txt_Phonenumber)

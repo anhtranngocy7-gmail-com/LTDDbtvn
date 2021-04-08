@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.nhom3_quoc_onboarding3.*
 class OnboardingthreeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e("OnboardingthreeActivity", "Onboardingthree Activity _ onCreate")
         setContentView(R.layout.nhom3_quoc_onboarding3)
 
     }
