@@ -6,6 +6,6 @@ import android.os.Bundle
 class OnboardingOneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.nhom3_onboard_dat)
+        setContentView(R.layout.nhom3_dat_onboard)
     }
 }

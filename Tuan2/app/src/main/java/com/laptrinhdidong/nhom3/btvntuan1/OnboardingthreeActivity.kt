@@ -26,10 +26,7 @@ class OnboardingthreeActivity : AppCompatActivity() {
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-<<<<<<< HEAD:Tuan1/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/OnboardingthreeActivity.kt
-=======
         Log.e("OnboardingthreeActivity", "Onboardingthree Activity_ onTouch")
->>>>>>> e702bfb2ed47602be2c6cf80e6b915485bf58e70:Tuan1/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/Onboardingthree.kt
         val intent = Intent(this@OnboardingthreeActivity, WelcomeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
