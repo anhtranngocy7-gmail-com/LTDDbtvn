@@ -13,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.nhom3_profile_an)
+        setContentView(R.layout.nhom3_an_profile)
         val TextviewEmail = findViewById<TextView>(R.id.txt_Email)
         val TextviewFullname = findViewById<TextView>(R.id.txt_Fullname)
         val TextviewPhonenumber = findViewById<TextView>(R.id.txt_Phonenumber)
@@ -48,7 +48,7 @@ class ProfileActivity : AppCompatActivity() {
                     }
                     setNegativeButton("Cancel")
                     { dialog, which_ ->
-                        Toast.makeText(this@ProfileActivity, "Say Hi", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@ProfileActivity, "", Toast.LENGTH_SHORT).show()
                     }
                     setView(dialogLayout)
                     show()

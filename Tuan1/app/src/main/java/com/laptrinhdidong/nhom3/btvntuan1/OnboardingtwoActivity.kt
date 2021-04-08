@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.MotionEvent
 import android.widget.Button
 import kotlinx.android.synthetic.main.nhom3_binh_onboarding2.view.*
-import kotlinx.android.synthetic.main.nhom3_onboard_dat.*
+import kotlinx.android.synthetic.main.nhom3_dat_onboard.*
 
 class OnboardingtwoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

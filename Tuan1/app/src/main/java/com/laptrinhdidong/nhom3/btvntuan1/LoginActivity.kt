@@ -8,7 +8,7 @@ import android.widget.EditText
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.nhom3_login_an)
+        setContentView(R.layout.nhom3_an_login)
         var btn_login=findViewById<Button>(R.id.btn_login);
         var et_email_login=findViewById<EditText>(R.id.et_email_login);
         var et_pass_login=findViewById<EditText>(R.id.et_pass_login);
