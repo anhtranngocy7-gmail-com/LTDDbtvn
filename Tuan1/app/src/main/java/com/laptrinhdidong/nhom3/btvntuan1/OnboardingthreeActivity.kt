@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.MotionEvent
 import kotlinx.android.synthetic.main.nhom3_quoc_onboarding3.*
 
-class Onboardingthree : AppCompatActivity() {
+class OnboardingthreeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -32,7 +32,7 @@ class Onboardingthree : AppCompatActivity() {
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val intent = Intent(this@Onboardingthree, WelcomeActivity::class.java)
+        val intent = Intent(this@OnboardingthreeActivity, WelcomeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
     }

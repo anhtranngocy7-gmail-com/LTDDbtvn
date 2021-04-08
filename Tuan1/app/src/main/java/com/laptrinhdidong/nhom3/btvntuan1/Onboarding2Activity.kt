@@ -38,7 +38,7 @@ class Onboarding2Activity : AppCompatActivity() {
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
-        val intent = Intent(this@Onboarding2Activity, Onboardingthree::class.java)
+        val intent = Intent(this@Onboarding2Activity, OnboardingthreeActivity::class.java)
         startActivity(intent)
         return super.onTouchEvent(event)
     }
