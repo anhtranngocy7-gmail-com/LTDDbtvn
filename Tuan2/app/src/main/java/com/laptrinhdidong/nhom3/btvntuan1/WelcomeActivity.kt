@@ -9,6 +9,7 @@ import android.widget.Button
 class WelcomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e("Welcome", "Welcome Activity _ onCreate")
         setContentView(R.layout.nhom3_binh_welcome)
         val btn_signin = findViewById<Button>(R.id.signin)
 

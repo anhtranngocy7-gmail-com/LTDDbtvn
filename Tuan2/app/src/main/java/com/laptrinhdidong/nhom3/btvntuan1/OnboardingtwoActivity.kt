@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.nhom3_dat_onboard.*
 class OnboardingtwoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Log.e("OnboardingtwoActivity", "Onboardingtwo Activity _ onCreate")
         setContentView(R.layout.nhom3_binh_onboarding2)
 
     }
