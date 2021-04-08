@@ -6,11 +6,114 @@
     android:layout_height="match_parent"
     android:background="@drawable/test"
     tools:context=".MainActivity">
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/binh_mask"
-    tools:ignore="MissingConstraints"></android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/binh_mask"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/gg"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/customfbgg"
+            android:drawableLeft="@drawable/binh_logingg"
+            android:padding="16dp"
+            android:text="Google"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            app:icon="@drawable/binh_logingg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.743" />
+
+        <Button
+            android:id="@+id/fb"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/customfbgg"
+            android:drawableLeft="@drawable/binh_loginfb"
+            android:padding="16dp"
+            android:text="Facebook"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            app:icon="@drawable/binh_loginfb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/gg"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.743" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/gg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.92"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.936"
+            tools:ignore="MissingConstraints"></View>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/fb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.936"
+            tools:ignore="MissingConstraints"></View>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="162dp"
+            android:layout_height="19dp"
+            android:layout_marginBottom="44dp"
+            android:text="Already have an account?"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.361"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_editor_absoluteX="81.5dp"
+            app:layout_editor_absoluteY="740dp" />
+
+        <Button
+            android:id="@+id/signin"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FFFFFF"
+            android:text="@string/underline"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.811"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.950"
+            app:layout_editor_absoluteX="253dp"
+            app:layout_editor_absoluteY="740dp"
+            tools:ignore="MissingConstraints" />
+    </android.support.constraint.ConstraintLayout>
+
     <TextView
         android:id="@+id/welcome"
         android:layout_width="311dp"
@@ -108,38 +211,6 @@
         tools:ignore="MissingConstraints"></Button>
 
     <Button
-        android:id="@+id/fb"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="232dp"
-        android:layout_marginBottom="176dp"
-        android:background="@drawable/customfbgg"
-        android:drawableLeft="@drawable/binh_loginfb"
-        android:padding="16dp"
-        android:text="Facebook"
-        android:textColor="#000000"
-        android:textSize="13sp"
-        app:icon="@drawable/binh_loginfb"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/gg"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="176dp"
-        android:background="@drawable/customfbgg"
-        android:drawableLeft="@drawable/binh_logingg"
-        android:padding="16dp"
-        android:text="Google"
-        android:textColor="#000000"
-        android:textSize="13sp"
-        app:icon="@drawable/binh_logingg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -155,58 +226,4 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="162dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="44dp"
-        android:text="Already have an account?"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_editor_absoluteX="81.5dp"
-        app:layout_editor_absoluteY="740dp" />
-
-    <Button
-        android:id="@+id/signin"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="29.5dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="@string/underline"
-        android:textAlignment="viewStart"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_editor_absoluteX="253dp"
-        app:layout_editor_absoluteY="740dp"
-        tools:ignore="MissingConstraints" />
-
-    <View
-        android:layout_width="120dp"
-        android:layout_height="1dp"
-        android:layout_marginBottom="36dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/gg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.169"
-        app:layout_constraintStart_toEndOf="@+id/signinwith"
-        tools:ignore="MissingConstraints"></View>
-
-    <View
-        android:layout_width="120dp"
-        android:layout_height="1dp"
-        android:layout_marginBottom="36dp"
-        android:background="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/fb"
-        app:layout_constraintEnd_toStartOf="@+id/signinwith"
-        app:layout_constraintHorizontal_bias="0.711"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"></View>
 </android.support.constraint.ConstraintLayout>
