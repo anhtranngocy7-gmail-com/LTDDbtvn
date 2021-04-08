@@ -1,11 +1,13 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
+
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import kotlinx.android.synthetic.main.nhom3_binh_splash.view.*
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                val intent = Intent(this@MainActivity, Onboarding2Activity::class.java)
+                val intent = Intent(this@MainActivity, OnboardingtwoActivity::class.java)
                 startActivity(intent)
             }
         }

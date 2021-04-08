@@ -118,7 +118,7 @@
             android:background="@drawable/inputbackground"
             android:ems="16"
             android:hint="Password"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:paddingVertical="20dp"
             android:paddingStart="20dp"
             android:textSize="17sp"
