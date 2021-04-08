@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
+<<<<<<< HEAD
+        <activity android:name=".OnboardingOneActivity"></activity>
+        <activity android:name=".SplashActivity" />
+        <activity android:name=".Onboarding2Activity" />
+=======
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".SplashActivity"></activity>
         <activity android:name=".OnboardingtwoActivity" />
+>>>>>>> e702bfb2ed47602be2c6cf80e6b915485bf58e70
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".OnboardingthreeActivity" />
         <activity android:name=".MainActivity">
