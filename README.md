@@ -31,3 +31,30 @@
 - Tạo flow app sau: Bình, Quốc, Đạt
 - Login: An
 - Profile: Ngọc Anh
+
+# Week-3: DataBinding - ViewModel - LiveData
+
+- challenge: https://drive.google.com/file/d/1GTFMMz4vJZXotT33_avjz4F1yAN9YhrZ/view?usp=sharing
+  
+- slide: https://docs.google.com/presentation/d/1q_fVHC7UDNJtYuRkVnRfZLbSKC9YHY1QiVVB6ffVZa8/edit
+
+- link record: https://www.youtube.com/watch?v=Vdm39k-x-eE
+  
+- demo code: https://github.com/namphho/Week3-Samnple
+  
+**Target:**
+## Áp dụng Databinding & ViewModel & LiveData vào các màn hình sau
+
+- SignUp: Bình, **An**, Quốc
+   
+  - Tạo Account mới ở màn hình SignUp (email/password)
+  
+  - **Gợi ý:** Tạo class DataStore (Singleton) để lưu thông tin SignUp
+  
+- LoginIn: Đạt
+  
+  - Sử dụng Account vừa tạo đăng nhập ở màn hình login
+  
+- Profile: Ngọc Anh
+  
+  - Hiển thị Info ở màn hình Profile
