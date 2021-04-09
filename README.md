@@ -42,8 +42,9 @@
   
 - demo code: https://github.com/namphho/Week3-Samnple
   
-**Target:**
 ## Áp dụng Databinding & ViewModel & LiveData vào các màn hình sau
+
+**Target:**
 
 - SignUp: Bình, **An**, Quốc
    
