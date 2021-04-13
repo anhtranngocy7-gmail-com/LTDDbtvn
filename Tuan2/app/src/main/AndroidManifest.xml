@@ -10,12 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
         <activity android:name=".OnboardingOneActivity"></activity>
-        <activity android:name=".SplashActivity" />
+<!--        <activity android:name=".SplashActivity" />-->
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".OnboardingtwoActivity" />
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".OnboardingthreeActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SignUpActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
