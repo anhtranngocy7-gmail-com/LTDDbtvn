@@ -5,5 +5,5 @@ import androidx.lifecycle.ViewModel
 
 class SignUpViewModel : ViewModel()
 {
-    var account : Account=Account("default","default","default")
+    var account : Account=Account("default","default","default","")
 }
