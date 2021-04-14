@@ -84,7 +84,6 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="16dp"
-            android:text="Arlene Mccoy"
             android:textColor="#000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -113,7 +112,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:padding="16dp"
-            android:text="prelookstudio@gmail.com"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_Email" />
@@ -153,7 +152,6 @@
 
             android:inputType="textPassword"
             android:padding="16dp"
-            android:text="180599"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_Password" />
