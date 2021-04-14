@@ -100,10 +100,6 @@
                 android:layout_marginBottom="25dp"
                 android:background="@drawable/inputbackground"
                 android:ems="16"
-<<<<<<< HEAD
-=======
-                android:text="@{account.email}"
->>>>>>> fcef645692a0517472c739a73612d60001839ae7
                 android:hint="Your email or phone"
                 android:inputType="textEmailAddress"
                 android:text="@{account.email}"
