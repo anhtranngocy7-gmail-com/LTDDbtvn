@@ -15,18 +15,16 @@ class SignUpActivity : AppCompatActivity()  {
     private var account : Account = Account("Default fullname", "Default email", "Default password","Default phone")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DataStore.account=this.account
-        binding=DataBindingUtil.setContentView(this,R.layout.nhom3_quoc_signup)
+//        DataStore.account=this.account
+
         viewModel=ViewModelProvider(this).get(SignUpViewModel::class.java)
+        binding=DataBindingUtil.setContentView(this,R.layout.nhom3_quoc_signup)
         binding.btnSignup123.setOnClickListener {
             viewModel.account.fullname=binding.editTextFullname.text.toString().trim()
             viewModel.account.email=binding.editTextEmail.text.toString().trim()
             viewModel.account.password=binding.editTextPassword.text.toString().trim()
-            DataStore.account.fullname=viewModel.account.fullname
-            DataStore.account.email=viewModel.account.email
-            DataStore.account.password=viewModel.account.password
-            DataStore.account.phone="0"
-            Toast.makeText(this,DataStore.account.fullname.trim(),Toast.LENGTH_SHORT).show()
+            var accountTempt : Account = Account(viewModel.account.fullname, viewModel.account.email, viewModel.account.password,"+84")
+            DataStore.addAccount(accountTempt)
             val intent = Intent(this@SignUpActivity,LoginActivity::class.java)
             startActivity(intent)
         }
