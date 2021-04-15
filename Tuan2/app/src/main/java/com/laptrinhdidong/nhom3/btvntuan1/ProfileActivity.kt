@@ -28,24 +28,27 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.nhom3_an_profile)
         viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        viewModel.account.value=account
         Log.e("Profile", "Profile Activity _ onCreate")
         val bundle = intent.extras
         bundle?.let {
             val userInformation = bundle.getParcelable<UserInformationData>("userInformation")
             idUser = userInformation?.index
-            viewModel.account.fullname = DataStore.getListAccount()[idUser!!].fullname
-            viewModel.account.email = DataStore.getListAccount()[idUser!!].email
-            viewModel.account.phone = DataStore.getListAccount()[idUser!!].phone
+            viewModel.setFullName(DataStore.getListAccount()[idUser!!].fullname)
+            viewModel.setEmail(DataStore.getListAccount()[idUser!!].email)
+            viewModel.setPhone(DataStore.getListAccount()[idUser!!].phone)
         }
         binding.apply {
             DialogProfileF(1, txt_Fullname, "Name",idUser)
             DialogProfileF(2, txt_Phonenumber,"Phone Number",idUser)
             DialogProfileF(3,txt_Email_profile,"Email",idUser)
         }
-        binding.account = viewModel.account
+        binding.account = viewModel.account.value
+        DataStore.getListAccount()[idUser!!]= viewModel.account.value!!
     }
     fun DialogProfileF(checkId: Int, TextviewDPF: TextView, title:String, idUser: Int?) {
         TextviewDPF.setOnClickListener {
+                Toast.makeText(this,DataStore.getListAccount()[0].fullname.trim(),Toast.LENGTH_SHORT).show()
                 val builder = AlertDialog.Builder(this)
                 val inflater = layoutInflater
                 val dialogLayout = inflater.inflate(R.layout.nhom3_anh_dialog_profile, null)
@@ -55,16 +58,14 @@ class ProfileActivity : AppCompatActivity() {
                     setPositiveButton("Apply")
                     { dialog, which_ ->
                         if (checkId == 1 ) {
-                            viewModel.account.fullname = editTextProfile.text.toString().trim()
-                            DataStore.setFullNameAccount(idUser,viewModel.account.fullname)
+                            viewModel.setFullName(editTextProfile.text.toString().trim())
                         }
                         else if ( checkId == 2) {
-                            viewModel.account.phone = editTextProfile.text.toString().trim()
-                            DataStore.setPhoneAccount(idUser,viewModel.account.phone)
+                            viewModel.setPhone(editTextProfile.text.toString().trim())
+
                         }
                         else if ( checkId == 3) {
-                            viewModel.account.email = editTextProfile.text.toString().trim()
-                            DataStore.setEmailAccount(idUser,viewModel.account.email)
+                            viewModel.setEmail(editTextProfile.text.toString().trim())
                         }
                         Toast.makeText(this@ProfileActivity, "Successful", Toast.LENGTH_SHORT)
                                 .show()
