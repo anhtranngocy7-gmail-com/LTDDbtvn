@@ -49,7 +49,6 @@ class ProfileActivity : AppCompatActivity() {
     }
     fun DialogProfileF(checkId: Int, TextviewDPF: TextView, title:String, idUser: Int?) {
         TextviewDPF.setOnClickListener {
-                Toast.makeText(this,DataStore.getListAccount()[0].fullname.trim(),Toast.LENGTH_SHORT).show()
                 val builder = AlertDialog.Builder(this)
                 val inflater = layoutInflater
                 val dialogLayout = inflater.inflate(R.layout.nhom3_anh_dialog_profile, null)

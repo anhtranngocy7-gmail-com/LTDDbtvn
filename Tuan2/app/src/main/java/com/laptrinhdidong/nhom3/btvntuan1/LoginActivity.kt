@@ -29,22 +29,27 @@ class LoginActivity : AppCompatActivity() {
                     account=viewModel.account
                     
                     var indexTemp : Int =0
+                    var checkTrue: Int = 0;
                     for(item in DataStore.getListAccount())
                     {
                         if(account?.email.toString().trim()==item.email&&account?.password.toString().trim()==item.password)
                         {
                             Log.e("LoginActivity", "Login Activity _ Login Success")
+                            Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
                             val bundle = Bundle()
                             val userInformation = UserInformationData(index = indexTemp,email = item.email, fullName = item.fullname.trim(), phoneNumber = item.phone)
                             bundle.putParcelable("userInformation", userInformation)
                             intent.putExtras(bundle)
+                            checkTrue = 1;
                             startActivity(intent)
                         }
                         indexTemp++
                     }
-                Log.e("LoginActivity", "Login Activity _ Login Failed")
-                Toast.makeText(this@LoginActivity, "LOGIN FAILED", Toast.LENGTH_LONG).show()
+                     if (checkTrue ==0)
+                        {
+                            Toast.makeText(this@LoginActivity, "Please try again", Toast.LENGTH_SHORT).show()
+                        }
                     invalidateAll()
 
             }
