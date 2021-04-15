@@ -46,9 +46,12 @@ class LoginActivity : AppCompatActivity() {
                     }
                     invalidateAll()
 
+<<<<<<< HEAD
                 account?.email = et_email_login.text.toString().trim()
                 account?.password = et_pass_login.text.toString().trim()
 
+                Log.e("LoginActivity",DataStore.account.email.trim())
+                Log.e("LoginActivity",DataStore.account.password.trim())
                 account?.email?.let { it1 -> Log.e("LoginActivity", it1) }
                 account?.password?.let { it1 -> Log.e("LoginActivity", it1) }
 
@@ -63,6 +66,8 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 }
                 invalidateAll()
+=======
+>>>>>>> ab4795261c68838730338fbff6aeec6870832536
             }
 
         }
