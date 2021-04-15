@@ -42,7 +42,10 @@ class LoginActivity : AppCompatActivity() {
                         }
                         indexTemp++
                     }
+                Log.e("LoginActivity", "Login Activity _ Login Failed")
+                Toast.makeText(this@LoginActivity, "LOGIN FAILED", Toast.LENGTH_LONG).show()
                     invalidateAll()
+
             }
 
         }
