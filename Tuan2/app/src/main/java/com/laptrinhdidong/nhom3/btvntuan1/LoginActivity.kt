@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.nhom3_an_login.*
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : Nhom3AnLoginBinding
     private lateinit var viewModel: LoginViewModel
-    private var account : Account = Account("Default fullname", "", "Default password", "000000000")
+    private var account : Account = Account("Default fullname", "default email", "Default password", "000000000")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
