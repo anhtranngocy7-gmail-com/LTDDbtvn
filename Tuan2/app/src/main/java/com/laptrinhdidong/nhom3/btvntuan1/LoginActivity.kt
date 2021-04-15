@@ -27,6 +27,7 @@ class LoginActivity : AppCompatActivity() {
                     viewModel.account.email=etEmailLogin.text.toString().trim()
                     viewModel.account.password=etPassLogin.text.toString().trim()
                     account=viewModel.account
+                    
                     var indexTemp : Int =0
                     for(item in DataStore.getListAccount())
                     {
