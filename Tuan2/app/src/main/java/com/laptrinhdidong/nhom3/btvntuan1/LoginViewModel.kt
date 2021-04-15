@@ -4,5 +4,4 @@ import androidx.lifecycle.ViewModel
 
 class LoginViewModel : ViewModel(){
     var account : Account = Account("default fullname", "", "default password","")
-
 }
