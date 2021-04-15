@@ -24,11 +24,9 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
 
             btn_login.setOnClickListener {
-                Log.e("LoginActivity", DataStore.getListAccount()[0].password.trim())
                     viewModel.account.email=etEmailLogin.text.toString().trim()
                     viewModel.account.password=etPassLogin.text.toString().trim()
                     account=viewModel.account
-
                     var indexTemp : Int =0
                     for(item in DataStore.getListAccount())
                     {
@@ -44,6 +42,8 @@ class LoginActivity : AppCompatActivity() {
                         }
                         indexTemp++
                     }
+                Log.e("LoginActivity", "Login Activity _ Login Failed")
+                Toast.makeText(this@LoginActivity, "LOGIN FAILED", Toast.LENGTH_LONG).show()
                     invalidateAll()
 
             }
