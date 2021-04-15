@@ -4,6 +4,6 @@ import androidx.lifecycle.ViewModel
 
 class ProfileViewModel: ViewModel() {
 
-    var account : Account = Account("default fullname", "default email", "default password","")
+    var account : Account = Account("", "", "","")
 
 }

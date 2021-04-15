@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
                     Log.e("LoginActivity", "Login Activity _ Login Success")
                     val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
                     val bundle = Bundle()
-                    val userInformation = UserInformationData(email = account?.email, fullName = DataStore.account.fullname.trim(), phoneNumber = "+ 0399 371 485")
+                    val userInformation = UserInformationData(email = DataStore.account.email, fullName = DataStore.account.fullname.trim(), phoneNumber = DataStore.account.phone.trim())
                     bundle.putParcelable("userInformation", userInformation)
                     intent.putExtras(bundle)
                     startActivity(intent)
