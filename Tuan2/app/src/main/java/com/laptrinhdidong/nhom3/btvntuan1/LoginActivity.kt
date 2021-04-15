@@ -28,7 +28,10 @@ class LoginActivity : AppCompatActivity() {
                     viewModel.account.email=etEmailLogin.text.toString().trim()
                     viewModel.account.password=etPassLogin.text.toString().trim()
                     account=viewModel.account
+<<<<<<< HEAD
                     Toast.makeText(this@LoginActivity, DataStore.list.value?.get(0)?.password,Toast.LENGTH_SHORT).show()
+=======
+>>>>>>> nhom3_an3
                     var indexTemp : Int =0
                     for(item in DataStore.list.value!!)
                     {
@@ -45,27 +48,6 @@ class LoginActivity : AppCompatActivity() {
                         indexTemp++
                     }
                     invalidateAll()
-
-
-//                account?.email = et_email_login.text.toString().trim()
-//                account?.password = et_pass_login.text.toString().trim()
-//
-//                Log.e("LoginActivity",DataStore.account.email.trim())
-//                Log.e("LoginActivity",DataStore.account.password.trim())
-//                account?.email?.let { it1 -> Log.e("LoginActivity", it1) }
-//                account?.password?.let { it1 -> Log.e("LoginActivity", it1) }
-//
-//                if (account?.email == DataStore.account.email.trim() && account?.password == DataStore.account.password.trim()) {
-//                    Toast.makeText(this@LoginActivity, "LOGIN SUCCESS", Toast.LENGTH_SHORT)
-//                    Log.e("LoginActivity", "Login Activity _ Login Success")
-//                    val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
-//                    val bundle = Bundle()
-//                    val userInformation = UserInformationData(email = DataStore.account.email, fullName = DataStore.account.fullname.trim(), phoneNumber = DataStore.account.phone.trim())
-//                    bundle.putParcelable("userInformation", userInformation)
-//                    intent.putExtras(bundle)
-//                    startActivity(intent)
-//                }
-//                invalidateAll()
             }
 
         }
