@@ -22,13 +22,13 @@
 ### Login_Dat_DataBinding_ViewModel_LiveData
 #### 1. Khai bao Databinding, ViewModel
 
-![login](../HinhAnh/week3_login_databinding_viewmodel.png)
+![login](../HinhAnh/week3_login_databinding_viewmodel.PNG)
 
 #### 2. Lay Email va Password, giu Email va Password thong qua ViewModel
 
-![login](../HinhAnh/week3_login_databinding_viewmodel_getData.png)
+![login](../HinhAnh/week3_login_databinding_viewmodel_getData.PNG)
 #### 3. Kiem tra Email va Password, Dang nhap thanh cong se chuyen sang ProfileActivity
 
-![login](../HinhAnh/week3_login_checkData.png)
+![login](../HinhAnh/week3_login_checkData.PNG)
 #### 4. Dang nhap that bai se hien thi thong bao len man hinh
-![login](../HinhAnh/week3_login_loginFailed.png)
+![login](../HinhAnh/week3_login_loginFailed.PNG)
