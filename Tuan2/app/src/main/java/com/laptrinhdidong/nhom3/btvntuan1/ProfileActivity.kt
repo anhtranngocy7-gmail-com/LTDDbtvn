@@ -33,16 +33,16 @@ class ProfileActivity : AppCompatActivity() {
         bundle?.let {
             val userInformation = bundle.getParcelable<UserInformationData>("userInformation")
             idUser = userInformation?.index
-            viewModel.account.fullname = DataStore.getListAccount()[idUser!!].fullname
-            viewModel.account.email = DataStore.getListAccount()[idUser!!].email
-            viewModel.account.phone = DataStore.getListAccount()[idUser!!].phone
+            viewModel.account.fullname = DataStore.list.value?.get(idUser!!)?.fullname.toString()
+            viewModel.account.email = DataStore.list.value?.get(idUser!!)?.email.toString()
+            viewModel.account.phone = DataStore.list.value?.get(idUser!!)?.phone.toString()
         }
         binding.apply {
             DialogProfileF(1, txt_Fullname, "Name",idUser)
             DialogProfileF(2, txt_Phonenumber,"Phone Number",idUser)
             DialogProfileF(3,txt_Email_profile,"Email",idUser)
         }
-        binding.account = viewModel.account
+        binding.account = viewMode
     }
     fun DialogProfileF(checkId: Int, TextviewDPF: TextView, title:String, idUser: Int?) {
         TextviewDPF.setOnClickListener {
@@ -56,7 +56,7 @@ class ProfileActivity : AppCompatActivity() {
                     { dialog, which_ ->
                         if (checkId == 1 ) {
                             viewModel.account.fullname = editTextProfile.text.toString().trim()
-                            DataStore.setFullNameAccount(idUser,viewModel.account.fullname)
+
                         }
                         else if ( checkId == 2) {
                             viewModel.account.phone = editTextProfile.text.toString().trim()
