@@ -3,6 +3,9 @@
 # SignUp
 ### Áp dụng databinding
 ![sigup](../HinhAnh/week3_sigup_databinding.png)
+# Login
+### check user và password có tồn tại trong DataStore không, nếu có thì chuyển đến trang profile
+![profile](../HinhAnh/Login_codecheckuser.png)
 # Profile
 ### Áp dụng livedata
 ![profile](../HinhAnh/profile_livedata.png)
@@ -99,3 +102,4 @@
 
 
 
+>>>>>>> ff9e72ddc559e9e4a05dec1dcccbf65b7d39b7ee

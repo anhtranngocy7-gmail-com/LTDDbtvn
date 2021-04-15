@@ -21,4 +21,9 @@ class ProfileViewModel: ViewModel() {
         account.value?.phone=phone
         account.postValue(account.value)
     }
+    fun setPass(pass : String)
+    {
+        account.value?.password=pass
+        account.postValue((account.value))
+    }
 }
