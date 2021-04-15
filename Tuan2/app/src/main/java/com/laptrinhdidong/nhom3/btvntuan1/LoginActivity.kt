@@ -19,17 +19,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.nhom3_an_login)
-<<<<<<< HEAD
-//        var binding=DataBindingUtil<Button>(R.id.btn_login);
-//        binding.account.email =
-//        Log.e("LoginActivity", "Login Activity _ Email: " + binding.account.email)
-//        var et_pass_login=findViewById<EditText>(R.id.et_pass_login);
-//        Log.e("LoginActivity", "Login Activity _ Email: " + binding.account.password)
-        Log.e("LoginActivity", "Login Activity _ Email: " + binding?.account?.email)
-//        var et_pass_login=findViewById<EditText>(R.id.et_pass_login);
-        Log.e("LoginActivity", "Login Activity _ Email: " + binding?.account?.password)
-=======
->>>>>>> c33d69068565823a9b14cf80b50202a2402886bf
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.account = viewModel.account
 
