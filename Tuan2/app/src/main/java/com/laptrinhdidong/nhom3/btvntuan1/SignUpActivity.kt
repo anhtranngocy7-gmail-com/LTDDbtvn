@@ -16,7 +16,6 @@ class SignUpActivity : AppCompatActivity()  {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        DataStore.account=this.account
-
         viewModel=ViewModelProvider(this).get(SignUpViewModel::class.java)
         binding=DataBindingUtil.setContentView(this,R.layout.nhom3_quoc_signup)
         binding.btnSignup123.setOnClickListener {
@@ -24,7 +23,7 @@ class SignUpActivity : AppCompatActivity()  {
             viewModel.account.email=binding.editTextEmail.text.toString().trim()
             viewModel.account.password=binding.editTextPassword.text.toString().trim()
             var accountTempt : Account = Account(viewModel.account.fullname, viewModel.account.email, viewModel.account.password,"+84")
-            DataStore.addAccount(accountTempt)
+            DataStore.list.value?.add(accountTempt)
             val intent = Intent(this@SignUpActivity,LoginActivity::class.java)
             startActivity(intent)
         }
