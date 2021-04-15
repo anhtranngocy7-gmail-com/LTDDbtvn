@@ -22,33 +22,30 @@ class ProfileActivity : AppCompatActivity() {
     private  lateinit var binding: Nhom3AnProfileBinding
     private var account : Account = Account("", "", "", "")
     private lateinit var viewModel: ProfileViewModel
+    private var idUser: Int? = 0
+    private var modeldialog: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.nhom3_an_profile)
         viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
         Log.e("Profile", "Profile Activity _ onCreate")
-
-
         val bundle = intent.extras
         bundle?.let {
             val userInformation = bundle.getParcelable<UserInformationData>("userInformation")
-            viewModel.account.fullname = String.format("%s", userInformation?.email)
-            viewModel.account.email = String.format("%s", userInformation?.fullName)
-            viewModel.account.phone = String.format("%s", userInformation?.phoneNumber)
+            idUser = userInformation?.index
+            viewModel.account.fullname = DataStore.getListAccount()[idUser!!].fullname
+            viewModel.account.email = DataStore.getListAccount()[idUser!!].email
+            viewModel.account.phone = DataStore.getListAccount()[idUser!!].phone
         }
-
         binding.apply {
-            DialogProfileF(1, txt_Fullname, "Name")
-            DialogProfileF(2, txt_Phonenumber,"Phone Number")
-            DialogProfileF(3,txt_Email_profile,"Email")
+            DialogProfileF(1, txt_Fullname, "Name",idUser)
+            DialogProfileF(2, txt_Phonenumber,"Phone Number",idUser)
+            DialogProfileF(3,txt_Email_profile,"Email",idUser)
         }
-
         binding.account = viewModel.account
     }
-
-    fun DialogProfileF(checkId: Int, TextviewDPF: TextView, title:String) {
-
-            TextviewDPF.setOnClickListener {
+    fun DialogProfileF(checkId: Int, TextviewDPF: TextView, title:String, idUser: Int?) {
+        TextviewDPF.setOnClickListener {
                 val builder = AlertDialog.Builder(this)
                 val inflater = layoutInflater
                 val dialogLayout = inflater.inflate(R.layout.nhom3_anh_dialog_profile, null)
@@ -59,12 +56,15 @@ class ProfileActivity : AppCompatActivity() {
                     { dialog, which_ ->
                         if (checkId == 1 ) {
                             viewModel.account.fullname = editTextProfile.text.toString().trim()
+                            DataStore.setFullNameAccount(idUser,viewModel.account.fullname)
                         }
                         else if ( checkId == 2) {
                             viewModel.account.phone = editTextProfile.text.toString().trim()
+                            DataStore.setPhoneAccount(idUser,viewModel.account.phone)
                         }
                         else if ( checkId == 3) {
                             viewModel.account.email = editTextProfile.text.toString().trim()
+                            DataStore.setEmailAccount(idUser,viewModel.account.email)
                         }
                         Toast.makeText(this@ProfileActivity, "Successful", Toast.LENGTH_SHORT)
                                 .show()

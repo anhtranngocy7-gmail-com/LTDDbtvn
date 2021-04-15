@@ -13,16 +13,16 @@ object DataStore {
         list.add(account)
     }
     ///các hàm set (dùng ở trang profile)
-    fun setFullNameAccount(index: Int,fullname : String)
+    fun setFullNameAccount(index: Int?,fullname : String)
     {
-        list[index].fullname=fullname
+        list[index!!].fullname=fullname
     }
-    fun setEmailAccount(index: Int,email: String)
+    fun setEmailAccount(index: Int?,email: String)
     {
-        list[index].email=email
+        list[index!!].email=email
     }
-    fun setPhoneAccount(index: Int,phone: String)
+    fun setPhoneAccount(index: Int?,phone: String)
     {
-        list[index].phone=phone
+        list[index!!].phone=phone
     }
 }
