@@ -37,6 +37,7 @@ class ProfileActivity : AppCompatActivity() {
             viewModel.setFullName(DataStore.getListAccount()[idUser!!].fullname)
             viewModel.setEmail(DataStore.getListAccount()[idUser!!].email)
             viewModel.setPhone(DataStore.getListAccount()[idUser!!].phone)
+            viewModel.setPass(DataStore.getListAccount()[idUser!!].password)
         }
         binding.apply {
             DialogProfileF(1, txt_Fullname, "Name",idUser)
