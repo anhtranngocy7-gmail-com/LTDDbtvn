@@ -29,13 +29,13 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
             btn_login.setOnClickListener {
 //          toast để test lấy data
-                Toast.makeText(this@LoginActivity,DataStore.account.email.trim(),Toast.LENGTH_SHORT).show()
-                Log.e("LoginActivity", DataStore.account.password.trim())
-                if (account?.email == DataStore.account.email.trim() && account?.password == DataStore.account.password.trim()) {
+                Toast.makeText(this@LoginActivity,DataStore.getListAccount()[0].password.trim(),Toast.LENGTH_SHORT).show()
+                Log.e("LoginActivity", DataStore.getListAccount()[0].password.trim())
+                if (account?.email == DataStore.getListAccount()[0].email.trim() && account?.password == DataStore.getListAccount()[0].password.trim()) {
                     Log.e("LoginActivity", "Login Activity _ Login Success")
                     val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
                     val bundle = Bundle()
-                    val userInformation = UserInformationData(email = account?.email, fullName = DataStore.account.fullname.trim(), phoneNumber = DataStore.account.phone.trim())
+                    val userInformation = UserInformationData(email = account?.email, fullName = DataStore.getListAccount()[0].fullname.trim(), phoneNumber = DataStore.getListAccount()[0].phone.trim())
                     bundle.putParcelable("userInformation", userInformation)
                     intent.putExtras(bundle)
                     startActivity(intent)
