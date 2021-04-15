@@ -24,16 +24,11 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
 
             btn_login.setOnClickListener {
-//                Log.e("LoginActivity", DataStore.list.value[0]?.password.trim())
                     viewModel.account.email=etEmailLogin.text.toString().trim()
                     viewModel.account.password=etPassLogin.text.toString().trim()
                     account=viewModel.account
-<<<<<<< HEAD
-                    Toast.makeText(this@LoginActivity, DataStore.list.value?.get(0)?.password,Toast.LENGTH_SHORT).show()
-=======
->>>>>>> nhom3_an3
                     var indexTemp : Int =0
-                    for(item in DataStore.list.value!!)
+                    for(item in DataStore.getListAccount())
                     {
                         if(account?.email.toString().trim()==item.email&&account?.password.toString().trim()==item.password)
                         {

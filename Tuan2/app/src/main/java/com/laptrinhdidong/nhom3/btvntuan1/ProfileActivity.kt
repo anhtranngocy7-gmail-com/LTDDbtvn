@@ -34,27 +34,17 @@ class ProfileActivity : AppCompatActivity() {
         bundle?.let {
             val userInformation = bundle.getParcelable<UserInformationData>("userInformation")
             idUser = userInformation?.index
-<<<<<<< HEAD
-            viewModel.account.fullname = DataStore.list.value?.get(idUser!!)?.fullname.toString()
-            viewModel.account.email = DataStore.list.value?.get(idUser!!)?.email.toString()
-            viewModel.account.phone = DataStore.list.value?.get(idUser!!)?.phone.toString()
-=======
             viewModel.setFullName(DataStore.getListAccount()[idUser!!].fullname)
             viewModel.setEmail(DataStore.getListAccount()[idUser!!].email)
             viewModel.setPhone(DataStore.getListAccount()[idUser!!].phone)
->>>>>>> nhom3_an3
         }
         binding.apply {
             DialogProfileF(1, txt_Fullname, "Name",idUser)
             DialogProfileF(2, txt_Phonenumber,"Phone Number",idUser)
             DialogProfileF(3,txt_Email_profile,"Email",idUser)
         }
-<<<<<<< HEAD
-        binding.account = viewMode
-=======
         binding.account = viewModel.account.value
         DataStore.getListAccount()[idUser!!]= viewModel.account.value!!
->>>>>>> nhom3_an3
     }
     fun DialogProfileF(checkId: Int, TextviewDPF: TextView, title:String, idUser: Int?) {
         TextviewDPF.setOnClickListener {
@@ -68,12 +58,7 @@ class ProfileActivity : AppCompatActivity() {
                     setPositiveButton("Apply")
                     { dialog, which_ ->
                         if (checkId == 1 ) {
-<<<<<<< HEAD
-                            viewModel.account.fullname = editTextProfile.text.toString().trim()
-
-=======
                             viewModel.setFullName(editTextProfile.text.toString().trim())
->>>>>>> nhom3_an3
                         }
                         else if ( checkId == 2) {
                             viewModel.setPhone(editTextProfile.text.toString().trim())

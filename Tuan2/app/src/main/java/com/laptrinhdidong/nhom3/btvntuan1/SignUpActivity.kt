@@ -23,7 +23,7 @@ class SignUpActivity : AppCompatActivity()  {
             viewModel.account.email=binding.editTextEmail.text.toString().trim()
             viewModel.account.password=binding.editTextPassword.text.toString().trim()
             var accountTempt : Account = Account(viewModel.account.fullname, viewModel.account.email, viewModel.account.password,"+84")
-            DataStore.list.value?.add(accountTempt)
+            DataStore.addAccount(accountTempt)
             val intent = Intent(this@SignUpActivity,LoginActivity::class.java)
             startActivity(intent)
         }
