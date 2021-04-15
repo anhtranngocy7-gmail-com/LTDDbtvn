@@ -15,7 +15,6 @@ class SignUpActivity : AppCompatActivity()  {
     private var account : Account = Account("Default fullname", "Default email", "Default password","Default phone")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        DataStore.account=this.account
         viewModel=ViewModelProvider(this).get(SignUpViewModel::class.java)
         binding=DataBindingUtil.setContentView(this,R.layout.nhom3_quoc_signup)
         binding.btnSignup123.setOnClickListener {

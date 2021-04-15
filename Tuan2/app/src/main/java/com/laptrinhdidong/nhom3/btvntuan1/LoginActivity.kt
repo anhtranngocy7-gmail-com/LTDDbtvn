@@ -33,12 +33,17 @@ class LoginActivity : AppCompatActivity() {
                         if(account?.email.toString().trim()==item.email&&account?.password.toString().trim()==item.password)
                         {
                             Log.e("LoginActivity", "Login Activity _ Login Success")
+                            Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
                             val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
                             val bundle = Bundle()
                             val userInformation = UserInformationData(index = indexTemp,email = item.email, fullName = item.fullname.trim(), phoneNumber = item.phone)
                             bundle.putParcelable("userInformation", userInformation)
                             intent.putExtras(bundle)
                             startActivity(intent)
+                        }
+                        else if (account?.email.toString().trim()!=item.email||account?.password.toString().trim()!=item.password)
+                        {
+                            Toast.makeText(this@LoginActivity, "Please try again", Toast.LENGTH_SHORT).show()
                         }
                         indexTemp++
                     }
