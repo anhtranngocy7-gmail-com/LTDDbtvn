@@ -3,20 +3,22 @@ package com.laptrinhdidong.nhom3.btvntuan1
 import android.os.Parcel
 import android.os.Parcelable
 
-public class UserInformationData(val email: String?, val fullName: String?, val phoneNumber: String?): Parcelable
+public class UserInformationData(val index: Int,val email: String?, val fullName: String?, val phoneNumber: String?): Parcelable
 {
 
     override fun toString(): String {
         return "UserInformation(email=$email, fullName=$fullName, phoneNumber=$phoneNumber)"
     }
-    constructor(email: String, fullName: String, phoneNumber: String, i: Int) : this(email, fullName, phoneNumber)
+    constructor(index: Int,email: String, fullName: String, phoneNumber: String, i: Int) : this(index,email, fullName, phoneNumber)
     constructor(parcel: Parcel) : this(
+            parcel.readInt(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString()
     ) {
     }
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeInt(index)
         parcel.writeString(email)
         parcel.writeString(fullName)
         parcel.writeString(phoneNumber)

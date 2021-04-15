@@ -21,35 +21,35 @@ class LoginActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.nhom3_an_login)
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         binding.account = viewModel.account
-
         binding.apply {
 
             btn_login.setOnClickListener {
+                Log.e("LoginActivity", DataStore.getListAccount()[0].password.trim())
+                    viewModel.account.email=etEmailLogin.text.toString().trim()
+                    viewModel.account.password=etPassLogin.text.toString().trim()
+                    account=viewModel.account
 
-                account?.email = et_email_login.text.toString().trim()
-                account?.password = et_pass_login.text.toString().trim()
+                    var indexTemp : Int =0
+                    for(item in DataStore.getListAccount())
+                    {
+                        if(account?.email.toString().trim()==item.email&&account?.password.toString().trim()==item.password)
+                        {
+                            Log.e("LoginActivity", "Login Activity _ Login Success")
+                            val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+                            val bundle = Bundle()
+                            val userInformation = UserInformationData(index = indexTemp,email = item.email, fullName = item.fullname.trim(), phoneNumber = item.phone)
+                            bundle.putParcelable("userInformation", userInformation)
+                            intent.putExtras(bundle)
+                            startActivity(intent)
+                        }
+                        indexTemp++
+                    }
+                    invalidateAll()
 
-                Log.e("LoginActivity",DataStore.account.email.trim())
-                Log.e("LoginActivity",DataStore.account.password.trim())
-                account?.email?.let { it1 -> Log.e("LoginActivity", it1) }
-                account?.password?.let { it1 -> Log.e("LoginActivity", it1) }
-
-                if (account?.email == DataStore.account.email.trim() && account?.password == DataStore.account.password.trim()) {
-                    Toast.makeText(this@LoginActivity, "LOGIN SUCCESS", Toast.LENGTH_SHORT)
-                    Log.e("LoginActivity", "Login Activity _ Login Success")
-                    val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
-                    val bundle = Bundle()
-                    val userInformation = UserInformationData(email = account?.email, fullName = DataStore.account.fullname.trim(), phoneNumber = "+ 0399 371 485")
-                    bundle.putParcelable("userInformation", userInformation)
-                    intent.putExtras(bundle)
-                    startActivity(intent)
-                }
-                invalidateAll()
             }
+
         }
-
     }
-
     override fun onStart() {
         super.onStart()
     }
