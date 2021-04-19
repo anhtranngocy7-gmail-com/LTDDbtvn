@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8888a64-ba04-49ee-8b3a-b7e4f1087ba3" name="Default Changelist" comment="" />
+    <list default="true" id="f8888a64-ba04-49ee-8b3a-b7e4f1087ba3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/Account.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/DataStore.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/LoginActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/LoginViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/OnboardingOneActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/OnboardingthreeActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/OnboardingtwoActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/ProfileActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/ProfileViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/SignUpActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/SignUpViewModel.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/UserInformationData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/WelcomeActivity.kt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Tuan2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Source" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="SvnConfiguration">
@@ -36,9 +51,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1617861273528">
+    <state x="549" y="172" key="FileChooserDialogImpl" timestamp="1618845928731">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/-1024.0.1024.738@0.0.1536.834" timestamp="1618845928731" />
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1617861273528" />
   </component>
 </project>
