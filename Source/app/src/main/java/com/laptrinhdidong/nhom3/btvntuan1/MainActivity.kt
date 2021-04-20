@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.e("Splash", "Splash Activity _ onCreate")
-        setContentView(R.layout.nhom3_binh_splash)
+        setContentView(R.layout.nhom3_quoc_list_restaurant)
     }
 
     override fun onStart() {
