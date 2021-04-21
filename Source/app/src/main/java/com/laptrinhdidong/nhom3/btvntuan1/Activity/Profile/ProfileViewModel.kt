@@ -26,4 +26,5 @@ class ProfileViewModel: ViewModel() {
         account.value?.password=pass
         account.postValue((account.value))
     }
+
 }
