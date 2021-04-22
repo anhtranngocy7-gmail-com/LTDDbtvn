@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
         <activity android:name=".Activity.ListRestaurant.ListRestaurantActivity">
+
         </activity>
         <activity android:name=".OnboardingOneActivity" />
         <activity android:name=".LoginActivity" />
