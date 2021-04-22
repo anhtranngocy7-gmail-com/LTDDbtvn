@@ -27,7 +27,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-14T16:19:43.094Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Source" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -113,10 +113,11 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="AVDManager/0.0.1536.864@0.0.1536.864" timestamp="1618418725765" />
-    <state x="297" y="61" key="FileChooserDialogImpl" timestamp="1618932023766">
-      <screen x="0" y="0" width="1366" height="768" />
+    <state x="334" y="66" key="FileChooserDialogImpl" timestamp="1618979549789">
+      <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="297" y="61" key="FileChooserDialogImpl/0.0.1366.768/1366.-145.1536.864@0.0.1366.768" timestamp="1618932023766" />
+    <state x="334" y="66" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1618979549789" />
     <state x="334" y="69" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1618414263003" />
   </component>
 </project>

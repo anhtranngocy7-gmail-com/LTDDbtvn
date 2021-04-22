@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\DtV\\nam4_k2\\Android\\Btvn\\nhom3_an\\LTDDbtvn\\Tuan2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nhom3_an_profile.xml",
+        "source": "E:\\DtV\\nam4_k2\\Android\\Btvn\\nhom3_an\\LTDDbtvn\\Tuan2\\app\\src\\main\\res\\layout\\nhom3_an_profile.xml"
+    },
+    {
+        "merged": "E:\\DtV\\nam4_k2\\Android\\Btvn\\nhom3_an\\LTDDbtvn\\Tuan2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nhom3_quoc_signup.xml",
+        "source": "E:\\DtV\\nam4_k2\\Android\\Btvn\\nhom3_an\\LTDDbtvn\\Tuan2\\app\\src\\main\\res\\layout\\nhom3_quoc_signup.xml"
+    },
+    {
+        "merged": "E:\\DtV\\nam4_k2\\Android\\Btvn\\nhom3_an\\LTDDbtvn\\Tuan2\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nhom3_an_login.xml",
+        "source": "E:\\DtV\\nam4_k2\\Android\\Btvn\\nhom3_an\\LTDDbtvn\\Tuan2\\app\\src\\main\\res\\layout\\nhom3_an_login.xml"
+    }
+]

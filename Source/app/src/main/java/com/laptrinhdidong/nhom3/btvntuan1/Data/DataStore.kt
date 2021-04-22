@@ -1,6 +1,7 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
 import androidx.lifecycle.MutableLiveData
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Restaurant
 
 object DataStore {
     private var list: MutableList<Account> = mutableListOf()
