@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 class RestaurantAdapter(ItemViewLayout: Int,ctx:Context) : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
-    //Create Data to show RestaurantList
+
     private var item_view: Int = ItemViewLayout
     private var context:Context=ctx
     var data: List<Restaurant> = listOf()
@@ -31,8 +31,7 @@ class RestaurantAdapter(ItemViewLayout: Int,ctx:Context) : RecyclerView.Adapter<
         var item = data[position]
         holder.tvName.text = item.Name
         holder.tvAddress.text =item.Address
-//        holder.imageAvatar.setImageResource(item.avatar)
-        Glide.with(context).load(item.AvatarURL).centerCrop().placeholder(R.drawable.cf1).into(holder.imageAvatar)
+        Glide.with(context).load(item.AvatarURL).centerCrop().placeholder(R.drawable.loading_icon).into(holder.imageAvatar)
 
     }
 
