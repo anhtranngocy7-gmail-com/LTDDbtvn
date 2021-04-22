@@ -10,11 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
         <activity android:name=".Activity.ListRestaurant.ListRestaurantActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".OnboardingOneActivity" />
         <activity android:name=".LoginActivity" />
@@ -22,7 +18,11 @@
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".OnboardingthreeActivity" />
         <activity android:name=".SignUpActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ProfileActivity" />
     </application>

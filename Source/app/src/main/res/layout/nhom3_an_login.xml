@@ -102,7 +102,6 @@
                 android:ems="16"
                 android:hint="Your email or phone"
                 android:inputType="textEmailAddress"
-                android:text="@{account.email}"
                 android:paddingVertical="20dp"
                 android:paddingStart="20dp"
                 android:textSize="17sp"

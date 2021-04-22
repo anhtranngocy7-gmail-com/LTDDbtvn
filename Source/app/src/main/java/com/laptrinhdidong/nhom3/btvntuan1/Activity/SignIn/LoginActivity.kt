@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.ListRestaurantActivity
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3AnLoginBinding
 import kotlinx.android.synthetic.main.nhom3_an_login.*
 
@@ -24,29 +25,16 @@ class LoginActivity : AppCompatActivity() {
         binding.apply {
 
             btn_login.setOnClickListener {
-                    viewModel.account.email=etEmailLogin.text.toString().trim()
-                    viewModel.account.password=etPassLogin.text.toString().trim()
-                    account=viewModel.account
-                    
-                    var indexTemp : Int =0
-                    var checkTrue: Int = 0;
-                    for(item in DataStore.getListAccount())
-                    {
-                        if(account?.email.toString().trim()==item.email&&account?.password.toString().trim()==item.password)
+                var check_login : Int =viewModel.checkLogin(binding)
+                        if(check_login!=-1)
                         {
-                            Log.e("LoginActivity", "Login Activity _ Login Success")
-                            Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
-                            val intent = Intent(this@LoginActivity, ProfileActivity::class.java)
+                            val intent = Intent(this@LoginActivity, ListRestaurantActivity::class.java)
                             val bundle = Bundle()
-                            val userInformation = UserInformationData(index = indexTemp,email = item.email, fullName = item.fullname.trim(), phoneNumber = item.phone)
+                            val userInformation = UserInformationData(index = check_login)
                             bundle.putParcelable("userInformation", userInformation)
                             intent.putExtras(bundle)
-                            checkTrue = 1;
                             startActivity(intent)
-                        }
-                        indexTemp++
-                    }
-                     if (checkTrue ==0)
+                        }else
                         {
                             Toast.makeText(this@LoginActivity, "Please try again", Toast.LENGTH_SHORT).show()
                         }
