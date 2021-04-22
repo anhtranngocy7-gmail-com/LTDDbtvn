@@ -21,7 +21,7 @@
             <ImageView
                 android:paddingTop="2dp"
                 android:id="@+id/imageView9"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 app:layout_constraintStart_toStartOf="parent"

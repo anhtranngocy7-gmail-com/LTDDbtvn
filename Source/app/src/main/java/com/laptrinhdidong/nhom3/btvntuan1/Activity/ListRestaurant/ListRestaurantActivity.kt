@@ -21,15 +21,17 @@ class ListRestaurantActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this, R.layout.nhom3_quoc_list_restaurant)
         viewModel = ViewModelProvider(this).get(ListRestaurantViewModel::class.java)
-        binding.rcList.adapter = viewModel.adapter
        if(!viewModel.layoutManager)
        {
            binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
+           adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view,this)
         }else
        {
+           adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview,this)
            binding.rcList.layoutManager=GridLayoutManager(applicationContext,2)
        }
-        viewModel.adapter.data = getDataSet()
+        binding.rcList.adapter =adapter
+        adapter.data = getDataSet()
 
     }
 
@@ -44,20 +46,20 @@ class ListRestaurantActivity : AppCompatActivity() {
         {
             R.id.type_Linear ->
             {
-                viewModel.adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view)
                 viewModel.layoutManager=false
                 binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
-                binding.rcList.adapter = viewModel.adapter
-                viewModel.adapter.data= getDataSet()
+                adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view,this)
+                binding.rcList.adapter = adapter
+                adapter.data= getDataSet()
                 return true
             }
             R.id.type_Grid ->
             {
-                viewModel.adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview)
                 viewModel.layoutManager=true
+                adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview,this)
                 binding.rcList.layoutManager=GridLayoutManager(applicationContext,2)
-                binding.rcList.adapter = viewModel.adapter
-                viewModel.adapter.data= getDataSet()
+                binding.rcList.adapter = adapter
+                adapter.data= getDataSet()
                 return true
             }else ->
         {

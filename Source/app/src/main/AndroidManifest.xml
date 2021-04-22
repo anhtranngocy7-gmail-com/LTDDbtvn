@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.laptrinhdidong.nhom3.btvntuan1">
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
         <activity android:name=".Activity.ListRestaurant.ListRestaurantActivity">
-
         </activity>
         <activity android:name=".OnboardingOneActivity" />
         <activity android:name=".LoginActivity" />

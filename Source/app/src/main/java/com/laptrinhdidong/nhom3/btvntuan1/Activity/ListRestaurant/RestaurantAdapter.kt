@@ -1,16 +1,19 @@
 package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
-class RestaurantAdapter(ItemViewLayout: Int) : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
+class RestaurantAdapter(ItemViewLayout: Int,ctx:Context) : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
     //Create Data to show RestaurantList
     private var item_view: Int = ItemViewLayout
+    private var context:Context=ctx
     var data: List<Restaurant> = listOf()
         set(value){
         field = value
@@ -28,7 +31,8 @@ class RestaurantAdapter(ItemViewLayout: Int) : RecyclerView.Adapter<RestaurantAd
         var item = data[position]
         holder.tvName.text = item.Name
         holder.tvAddress.text =item.Address
-        holder.imageAvatar.setImageResource(item.avatar)
+//        holder.imageAvatar.setImageResource(item.avatar)
+        Glide.with(context).load(item.AvatarURL).centerCrop().placeholder(R.drawable.cf1).into(holder.imageAvatar)
 
     }
 
