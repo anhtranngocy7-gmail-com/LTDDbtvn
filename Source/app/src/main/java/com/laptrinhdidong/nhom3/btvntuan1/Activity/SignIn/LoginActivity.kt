@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                 var check_login : Int =viewModel.checkLogin(binding)
                         if(check_login!=-1)
                         {
-                            val intent = Intent(this@LoginActivity, ListRestaurantActivity::class.java)
+                            val intent = Intent(this@LoginActivity,ProfileActivity::class.java)
                             val bundle = Bundle()
                             val userInformation = UserInformationData(index = check_login)
                             bundle.putParcelable("userInformation", userInformation)
