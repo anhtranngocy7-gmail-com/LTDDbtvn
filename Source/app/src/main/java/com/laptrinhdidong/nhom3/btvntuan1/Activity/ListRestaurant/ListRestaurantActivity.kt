@@ -8,7 +8,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.laptrinhdidong.nhom3.btvntuan1.DataStore.getDataSet
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBinding
 
@@ -31,7 +30,7 @@ class ListRestaurantActivity : AppCompatActivity() {
            binding.rcList.layoutManager=GridLayoutManager(applicationContext,2)
        }
         binding.rcList.adapter =adapter
-        adapter.data = getDataSet()
+        adapter.data = viewModel.data
 
     }
 
@@ -50,7 +49,7 @@ class ListRestaurantActivity : AppCompatActivity() {
                 binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
                 adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view,this)
                 binding.rcList.adapter = adapter
-                adapter.data= getDataSet()
+                adapter.data= viewModel.data
                 return true
             }
             R.id.type_Grid ->
@@ -59,7 +58,7 @@ class ListRestaurantActivity : AppCompatActivity() {
                 adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview,this)
                 binding.rcList.layoutManager=GridLayoutManager(applicationContext,2)
                 binding.rcList.adapter = adapter
-                adapter.data= getDataSet()
+                adapter.data= viewModel.data
                 return true
             }else ->
         {
