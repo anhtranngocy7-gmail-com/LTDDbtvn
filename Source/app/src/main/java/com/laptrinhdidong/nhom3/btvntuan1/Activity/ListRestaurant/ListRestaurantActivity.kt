@@ -43,7 +43,7 @@ class ListRestaurantActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId)
         {
-            R.id.type_Linear ->
+            R.id.general ->
             {
                 viewModel.layoutManager=false
                 binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
@@ -52,7 +52,7 @@ class ListRestaurantActivity : AppCompatActivity() {
                 adapter.data= viewModel.data
                 return true
             }
-            R.id.type_Grid ->
+            R.id.favorite ->
             {
                 viewModel.layoutManager=true
                 adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview,this)

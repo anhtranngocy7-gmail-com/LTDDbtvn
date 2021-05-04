@@ -9,12 +9,20 @@
     android:paddingTop="0dp"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="3dp"
-    app:cardElevation="8dp">
+    app:cardElevation="8dp"
+    android:background="@color/white">
+
 <LinearLayout
     android:paddingVertical="5dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/cb_favorite"
+        android:button="@drawable/state_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></androidx.appcompat.widget.AppCompatCheckBox>
     <ImageView
         android:scaleType="fitCenter"
         android:id="@+id/imageView9"
