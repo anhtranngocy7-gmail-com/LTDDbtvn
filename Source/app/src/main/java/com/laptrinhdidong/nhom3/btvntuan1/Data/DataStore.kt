@@ -246,7 +246,8 @@ object DataStore {
         }
     return listfavorite
     }
-    fun setFavorite(favorite: Boolean, index:Int){
+    fun setFavorite(favorite: Boolean, item_R:Restaurant){
+        var index:Int=listRestaurant.indexOf(item_R)
         listRestaurant[index].Favorite=favorite
     }
 }

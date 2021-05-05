@@ -36,7 +36,7 @@ class RestaurantAdapter(ItemViewLayout: Int,ctx:Context) : RecyclerView.Adapter<
         holder.tvAddress.text =item.Address
         Glide.with(context).load(item.AvatarURL).centerCrop().placeholder(R.drawable.loading_icon).into(holder.imageAvatar)
         holder.favorite.setOnClickListener {
-            DataStore.setFavorite(!item.Favorite,position)
+            DataStore.setFavorite(!item.Favorite,item)
         }
     }
     override fun getItemCount(): Int {
