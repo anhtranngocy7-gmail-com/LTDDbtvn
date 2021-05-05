@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantAdapter
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantRcvAdapter
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantViewModel
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBinding
@@ -16,7 +16,7 @@ import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBin
 class LinearListFavoriteFragment : Fragment() {
     private lateinit var viewDataBinding: Nhom3QuocListRestaurantBinding
     private lateinit var viewModel: RestaurantViewModel
-    private lateinit var adapter: RestaurantAdapter
+    private lateinit var rcvAdapter: RestaurantRcvAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,9 +34,9 @@ class LinearListFavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view, requireContext())
+        rcvAdapter = RestaurantRcvAdapter(R.layout.nhom3_quoc_restaurant_item_view, requireContext())
         viewDataBinding.rcList.layoutManager = LinearLayoutManager(context)
-        viewDataBinding.rcList.adapter = adapter
-        adapter.data = viewModel.data_favorite
+        viewDataBinding.rcList.adapter = rcvAdapter
+        rcvAdapter.data = viewModel.data_favorite
     }
 }

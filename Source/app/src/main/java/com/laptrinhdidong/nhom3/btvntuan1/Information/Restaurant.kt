@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
+package com.laptrinhdidong.nhom3.btvntuan1.Information
 
 class Restaurant(
     var Favorite: Boolean,

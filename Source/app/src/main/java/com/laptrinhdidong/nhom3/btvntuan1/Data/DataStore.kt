@@ -1,7 +1,6 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
-import androidx.lifecycle.MutableLiveData
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Restaurant
+import com.laptrinhdidong.nhom3.btvntuan1.Information.Restaurant
 
 object DataStore {
     private var list: MutableList<Account> = mutableListOf()
@@ -246,7 +245,7 @@ object DataStore {
         }
     return listfavorite
     }
-    fun setFavorite(favorite: Boolean, item_R:Restaurant){
+    fun setFavorite(favorite: Boolean, item_R: Restaurant){
         var index:Int=listRestaurant.indexOf(item_R)
         listRestaurant[index].Favorite=favorite
     }
