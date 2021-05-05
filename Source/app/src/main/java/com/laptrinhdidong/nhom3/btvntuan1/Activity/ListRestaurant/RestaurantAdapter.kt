@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
-class RestaurantAdapter(ItemViewLayout: Int,ctx:Context) : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
+class RestaurantAdapter(ItemViewLayout: Int, ctx: ListRestaurantActivity) : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
 
     private var item_view: Int = ItemViewLayout
     private var context:Context=ctx
