@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <item
-    android:id="@+id/type_Linear"
-    android:title="Linear"
+    android:id="@+id/general"
+    android:icon="@drawable/ic_tabler_icon_home"
+    android:title="Top"
     ></item>
     <item
-        android:id="@+id/type_Grid"
-        android:title="Grid"
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_tabler_icon_heart"
+        android:title="Favorite"
         ></item>
 </menu>
