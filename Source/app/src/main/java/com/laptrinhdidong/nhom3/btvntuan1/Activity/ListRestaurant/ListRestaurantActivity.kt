@@ -14,13 +14,13 @@ import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBin
 
 class ListRestaurantActivity : AppCompatActivity() {
     private lateinit var binding: Nhom3QuocListRestaurantBinding
-    private  lateinit var viewModel: ListRestaurantViewModel
+    private  lateinit var viewModel: RestaurantViewModel
     private lateinit var adapter : RestaurantAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding= DataBindingUtil.setContentView(this, R.layout.nhom3_quoc_list_restaurant)
-        viewModel = ViewModelProvider(this).get(ListRestaurantViewModel::class.java)
-       if(!viewModel.layoutManager)
+        viewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
+       if(!viewModel.option_menu)
        {
            binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
            adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view,this)
@@ -43,18 +43,18 @@ class ListRestaurantActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId)
         {
-            R.id.type_Linear ->
+            R.id.general ->
             {
-                viewModel.layoutManager=false
+                viewModel.option_menu=false
                 binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
                 adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view,this)
                 binding.rcList.adapter = adapter
                 adapter.data= viewModel.data
                 return true
             }
-            R.id.type_Grid ->
+            R.id.favorite ->
             {
-                viewModel.layoutManager=true
+                viewModel.option_menu=true
                 adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview,this)
                 binding.rcList.layoutManager=GridLayoutManager(applicationContext,2)
                 binding.rcList.adapter = adapter
