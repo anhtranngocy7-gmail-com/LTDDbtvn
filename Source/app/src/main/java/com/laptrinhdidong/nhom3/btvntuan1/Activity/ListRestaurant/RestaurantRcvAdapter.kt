@@ -13,6 +13,7 @@ import com.laptrinhdidong.nhom3.btvntuan1.DataStore
 import com.laptrinhdidong.nhom3.btvntuan1.Information.Restaurant
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
+
 class RestaurantRcvAdapter(ItemViewLayout: Int, ctx: Context) :
     RecyclerView.Adapter<RestaurantRcvAdapter.ViewHolder>() {
 
