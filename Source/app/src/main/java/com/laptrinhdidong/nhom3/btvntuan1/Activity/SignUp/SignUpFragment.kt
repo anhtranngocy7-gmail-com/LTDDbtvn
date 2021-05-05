@@ -1,6 +1,5 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Flagment
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.SignUp
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +10,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
 import com.laptrinhdidong.nhom3.btvntuan1.*
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignIn.LoginFragment
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocSignupBinding
 
 class SignUpFragment:Fragment() {

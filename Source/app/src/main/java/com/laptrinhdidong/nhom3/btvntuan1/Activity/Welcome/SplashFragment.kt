@@ -1,6 +1,5 @@
 package com.laptrinhdidong.nhom3.btvntuan1.Activity.Welcome
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -10,8 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.Boarding.OnboardingTwoFragment
-import com.laptrinhdidong.nhom3.btvntuan1.OnboardingtwoActivity
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Boarding.Fragment.OnboardingOneFragment
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 
@@ -37,7 +35,7 @@ class SplashFragment : Fragment() {
             override fun onFinish() {
                 parentFragmentManager.commit {
                     setReorderingAllowed(true)
-                    replace<OnboardingTwoFragment>(R.id.frag_container_view)
+                    replace<OnboardingOneFragment>(R.id.frag_container_view)
                     addToBackStack(null)
 
                 }

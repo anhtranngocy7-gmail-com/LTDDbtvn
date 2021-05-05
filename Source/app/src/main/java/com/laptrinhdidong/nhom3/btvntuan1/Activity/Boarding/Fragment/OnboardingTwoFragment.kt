@@ -1,6 +1,5 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.Boarding
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Boarding.Fragment
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +9,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
-import com.laptrinhdidong.nhom3.btvntuan1.OnboardingthreeActivity
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 class OnboardingTwoFragment:Fragment(){

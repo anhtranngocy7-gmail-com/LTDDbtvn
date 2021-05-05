@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Flagment
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Welcome
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignUp.SignUpFragment
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 class WelcomeFragment:Fragment() {

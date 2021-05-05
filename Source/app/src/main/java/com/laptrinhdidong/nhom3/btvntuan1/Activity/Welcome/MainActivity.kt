@@ -1,17 +1,12 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.util.Log
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.Welcome.SplashFragment
-import com.laptrinhdidong.nhom3.btvntuan1.Flagment.WelcomeFragment
-import kotlinx.android.synthetic.main.nhom3_binh_splash.view.*
 
 
 class MainActivity : AppCompatActivity() {

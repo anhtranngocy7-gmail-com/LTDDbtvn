@@ -13,12 +13,9 @@ import com.laptrinhdidong.nhom3.btvntuan1.DataStore
 import com.laptrinhdidong.nhom3.btvntuan1.Information.Restaurant
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
-<<<<<<< HEAD:Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/Activity/ListRestaurant/RestaurantAdapter.kt
-class RestaurantAdapter(ItemViewLayout: Int, ctx: ListRestaurantActivity) : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
-=======
+
 class RestaurantRcvAdapter(ItemViewLayout: Int, ctx: Context) :
     RecyclerView.Adapter<RestaurantRcvAdapter.ViewHolder>() {
->>>>>>> ff7ef30115dbddc3b78bd75e8fc91e09a8b5a254:Source/app/src/main/java/com/laptrinhdidong/nhom3/btvntuan1/Activity/ListRestaurant/RestaurantRcvAdapter.kt
 
     private var item_view: Int = ItemViewLayout
     private var context: Context = ctx
