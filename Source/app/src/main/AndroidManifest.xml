@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.laptrinhdidong.nhom3.btvntuan1">
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
+<<<<<<< HEAD
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,8 +27,19 @@
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".OnboardingthreeActivity" />
         <activity android:name=".SignUpActivity">
+=======
+        <activity android:name=".Activity.ListRestaurant.RestaurantActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+>>>>>>> ff7ef30115dbddc3b78bd75e8fc91e09a8b5a254
 
         </activity>
+        <activity android:name=".OnboardingOneActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".OnboardingtwoActivity" />
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".OnboardingthreeActivity" />
+        <activity android:name=".SignUpActivity"></activity>
         <activity android:name=".ProfileActivity" />
     </application>
 

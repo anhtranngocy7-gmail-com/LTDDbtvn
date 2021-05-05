@@ -2,13 +2,9 @@ package com.laptrinhdidong.nhom3.btvntuan1
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.ListRestaurantActivity
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3AnLoginBinding
 import kotlinx.android.synthetic.main.nhom3_an_login.*
 
