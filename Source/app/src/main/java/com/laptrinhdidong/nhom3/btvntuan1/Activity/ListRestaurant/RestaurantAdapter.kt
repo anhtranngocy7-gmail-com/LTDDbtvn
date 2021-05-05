@@ -39,7 +39,6 @@ class RestaurantAdapter(ItemViewLayout: Int,ctx:Context) : RecyclerView.Adapter<
             DataStore.setFavorite(!item.Favorite,position)
         }
     }
-
     override fun getItemCount(): Int {
 
         return data.size

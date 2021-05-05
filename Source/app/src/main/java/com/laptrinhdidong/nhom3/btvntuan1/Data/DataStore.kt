@@ -7,7 +7,7 @@ object DataStore {
     private var list: MutableList<Account> = mutableListOf()
     private var listRestaurant: List<Restaurant> = listOf(
         Restaurant(
-            true,
+            false,
             "33760",
             "Du Miên Garden Cafe - Phan Văn Trị",
             "7 Phan Văn Trị, P. 10",
@@ -17,7 +17,7 @@ object DataStore {
             R.drawable.cf1
         ),
         Restaurant(
-            true,
+            false,
             "978",
             "Country House Cafe",
             "18C Phan Văn Trị, P. 10",
