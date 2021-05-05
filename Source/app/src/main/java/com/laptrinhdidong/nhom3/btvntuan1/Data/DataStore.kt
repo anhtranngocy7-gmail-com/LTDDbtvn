@@ -5,7 +5,7 @@ import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Restaurant
 
 object DataStore {
     private var list: MutableList<Account> = mutableListOf()
-    private var listRestaurant: List<Restaurant> = listOf(
+    private var listRestaurant: MutableList<Restaurant> = mutableListOf(
         Restaurant(
             false,
             "33760",
@@ -232,14 +232,14 @@ object DataStore {
     }
 
     //DataStore for Restaurant List
-    fun getDataSet(): List<Restaurant> {
+    fun getDataSet(): MutableList<Restaurant> {
         return listRestaurant
     }
-    fun getFavoriteSet():List<Restaurant> {
+    fun getFavoriteSet():MutableList<Restaurant> {
         val listfavorite = mutableListOf<Restaurant>()
         for(item in DataStore.getDataSet())
         {
-            if(item.Favorite==true)
+            if(item.Favorite)
             {
                 listfavorite.add(item)
             }

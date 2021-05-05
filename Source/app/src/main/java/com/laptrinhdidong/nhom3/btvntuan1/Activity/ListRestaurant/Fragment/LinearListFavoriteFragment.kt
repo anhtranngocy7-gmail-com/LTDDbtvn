@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,14 +8,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.laptrinhdidong.nhom3.btvntuan1.DataStore
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantAdapter
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantViewModel
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBinding
 
 class LinearListFavoriteFragment : Fragment() {
     private lateinit var viewDataBinding: Nhom3QuocListRestaurantBinding
-    private  lateinit var viewModel: RestaurantViewModel
+    private lateinit var viewModel: RestaurantViewModel
     private lateinit var adapter: RestaurantAdapter
     override fun onCreateView(
         inflater: LayoutInflater,

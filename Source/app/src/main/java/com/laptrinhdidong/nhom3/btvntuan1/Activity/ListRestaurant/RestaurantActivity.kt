@@ -3,14 +3,14 @@ package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.core.view.get
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.laptrinhdidong.nhom3.btvntuan1.DataStore
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment.LinearListFavoriteFragment
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment.LinearListFragment
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.ActivityRestaurantBinding
 
@@ -25,7 +25,6 @@ class RestaurantActivity : AppCompatActivity() {
             setReorderingAllowed(true)
             if (viewModel.option_menu) {
                 add<LinearListFragment>(R.id.fragment_mainapp)
-                binding.bottomNavigationView[0].isSelected=true
             } else {
                 add<LinearListFavoriteFragment>(R.id.fragment_mainapp)
             }
