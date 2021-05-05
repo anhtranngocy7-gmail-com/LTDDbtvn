@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Welcome.SplashFragment
 import com.laptrinhdidong.nhom3.btvntuan1.Flagment.WelcomeFragment
 import kotlinx.android.synthetic.main.nhom3_binh_splash.view.*
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            add<WelcomeFragment>(R.id.frag_container_view)
+            add<SplashFragment>(R.id.frag_container_view)
         }
     }
 

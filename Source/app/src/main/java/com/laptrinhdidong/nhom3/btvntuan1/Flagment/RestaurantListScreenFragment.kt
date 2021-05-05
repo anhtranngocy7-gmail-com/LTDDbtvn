@@ -30,19 +30,17 @@ class RestaurantListScreenFragment:Fragment() {
         viewModel = ViewModelProvider(this).get(ListRestaurantViewModel::class.java)
         if(!viewModel.layoutManager)
         {
-            binding.rcList.layoutManager=LinearLayoutManager(applicationContext)
-            adapter=RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view, )
+            binding.rcList.layoutManager= LinearLayoutManager(context)
+            adapter= RestaurantAdapter(R.layout.nhom3_quoc_restaurant_item_view,
+                ListRestaurantActivity()
+            )
         }else
         {
             adapter=RestaurantAdapter(R.layout.nhom3_an_restaurant_item_cardview, ListRestaurantActivity())
-            binding.rcList.layoutManager= GridLayoutManager(activity,2)
+            binding.rcList.layoutManager= GridLayoutManager(context,2)
         }
         binding.rcList.adapter =adapter
         adapter.data = viewModel.data
-    }
-
-    override fun setHasOptionsMenu(hasMenu: Boolean) {
-        super.setHasOptionsMenu(hasMenu)
     }
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         // TODO Add your menu entries here
