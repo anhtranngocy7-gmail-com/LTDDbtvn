@@ -19,9 +19,5 @@ class MainActivity : AppCompatActivity() {
             add<SplashFragment>(R.id.frag_container_view)
         }
     }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 2da3c483853df9fa31535c59639516a0eb566931
 }
