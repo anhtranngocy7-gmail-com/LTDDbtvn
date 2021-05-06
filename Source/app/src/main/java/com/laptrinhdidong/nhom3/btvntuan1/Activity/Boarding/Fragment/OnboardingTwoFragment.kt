@@ -12,6 +12,7 @@ import androidx.fragment.app.replace
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 class OnboardingTwoFragment:Fragment(){
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
