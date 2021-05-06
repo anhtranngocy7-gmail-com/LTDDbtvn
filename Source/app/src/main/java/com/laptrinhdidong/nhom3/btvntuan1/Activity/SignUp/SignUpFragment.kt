@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.laptrinhdidong.nhom3.btvntuan1.*
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignIn.LoginFragment
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocSignupBinding
+import kotlinx.android.synthetic.main.nhom3_quoc_signup.*
 
 class SignUpFragment:Fragment() {
     private lateinit var viewModel: SignUpViewModel
@@ -57,6 +58,13 @@ class SignUpFragment:Fragment() {
                 if (!viewModel.validateEmail(editemail)) {
                     binding.editTextEmail.error = "Invalid email address"
                 }
+            }
+        }
+        btn_Login.setOnClickListener{
+            parentFragmentManager.commit {
+                setReorderingAllowed(true)
+                replace<LoginFragment>(R.id.frag_container_view)
+                addToBackStack(null)
             }
         }
     }

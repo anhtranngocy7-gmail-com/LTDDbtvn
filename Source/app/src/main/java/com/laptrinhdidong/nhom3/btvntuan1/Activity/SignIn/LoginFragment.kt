@@ -8,9 +8,12 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
 import com.laptrinhdidong.nhom3.btvntuan1.*
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantActivity
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignUp.SignUpFragment
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3AnLoginBinding
 import kotlinx.android.synthetic.main.nhom3_an_login.*
 
@@ -43,6 +46,13 @@ class LoginFragment:Fragment() {
                 }
                 invalidateAll()
 
+            }
+            btn_signup.setOnClickListener{
+                parentFragmentManager.commit {
+                    setReorderingAllowed(true)
+                    replace<SignUpFragment>(R.id.frag_container_view)
+                    addToBackStack(null)
+                }
             }
         }
     }

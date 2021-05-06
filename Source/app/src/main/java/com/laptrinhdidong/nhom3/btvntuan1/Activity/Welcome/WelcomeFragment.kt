@@ -8,6 +8,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.replace
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignIn.LoginFragment
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignUp.SignUpFragment
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
@@ -26,7 +27,7 @@ class WelcomeFragment:Fragment() {
         button.setOnClickListener {
             parentFragmentManager.commit {
                 setReorderingAllowed(true)
-                replace<SignUpFragment>(R.id.frag_container_view)
+                replace<LoginFragment>(R.id.frag_container_view)
                 addToBackStack(null)
             }
         }
