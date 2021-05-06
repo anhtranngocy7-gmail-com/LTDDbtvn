@@ -29,6 +29,7 @@
 
 [!Onboarding3](../HinhAnh/week5_Onboarding3_flagment_onCreateView.PNG)
 
+#### 6. Welcome Fragment - Child Fragment - Sẽ chuyển sang LoginFragment khi người dùng nhấn vào nút Signin
 
 
  
