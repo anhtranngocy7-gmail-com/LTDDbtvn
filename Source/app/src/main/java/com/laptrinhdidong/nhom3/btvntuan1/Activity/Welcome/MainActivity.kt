@@ -19,28 +19,4 @@ class MainActivity : AppCompatActivity() {
             add<SplashFragment>(R.id.frag_container_view)
         }
     }
-
-
-
-//    override fun onStart() {
-//        super.onStart()
-//        Log.e("Splash", "Splash Activity _ onStart")
-//
-//        val timer = object : CountDownTimer(6000, 1000){
-//            override fun onTick(millisUntilFinished: Long) {
-//                Log.e("Splash", "Splash Activity _ onStart")
-//            }
-//
-//            override fun onFinish() {
-//                val intent = Intent(this@MainActivity, OnboardingOneActivity::class.java)
-//                startActivity(intent)
-//            }
-//        }
-//        timer.start()
-//    }
-//
-//    override fun onResume() {
-//        super.onResume()
-//        Log.e("Splash", "Splash Activity _ onResume")
-//    }
 }
