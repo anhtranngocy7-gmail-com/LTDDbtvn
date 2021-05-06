@@ -32,6 +32,12 @@
 #### 6. Welcome Fragment - Child Fragment - Sẽ chuyển sang LoginFragment khi người dùng nhấn vào nút Signin
 [!Welcome](https://github.com/anhtranngocy7-gmail-com/LTDDbtvn/blob/nhom3_binh/HinhAnh/week5_welcomefragment.png)
 
+#### 7. LoginFragment - Child Fragment - Sẽ chuyển sang ListRestaurant khi người dùng nhấn vào nút Login và chuyển qua SignUpFragment (khi chưa có tài khoản) nếu nhấn nút Signup
+[!LoginFragment](https://github.com/anhtranngocy7-gmail-com/LTDDbtvn/blob/nhom3_binh/HinhAnh/week5_LoginFragment.png)
+
+#### 8. SignUpFragment - Child Fragment - Sẽ chuyển sang LoginFragment khi người dùng nhấn vào nút Sign Up hoặc login
+[!SignUpFragment](https://github.com/anhtranngocy7-gmail-com/LTDDbtvn/blob/nhom3_binh/HinhAnh/week5_SignUpFragment.png)
+
 
  
 
