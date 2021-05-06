@@ -13,6 +13,7 @@ import com.laptrinhdidong.nhom3.btvntuan1.Activity.Welcome.WelcomeFragment
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 class OnboardingthreeFragment: Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,7 +33,6 @@ class OnboardingthreeFragment: Fragment() {
                 return true
             }
         })
-
 
         return view
     }
