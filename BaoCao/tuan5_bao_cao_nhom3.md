@@ -1,7 +1,7 @@
 # Báo cáo tuần 5  
 ## Video Báo Cáo Demo Bài Tập Về Nhà Tuần 
 
-- Link video: https://youtu.be/wYTgp5Fv3YI
+- Link video: https://youtu.be/8y_VV4ZlBns
 
 ## Quá Trình Thực Hiện
 
@@ -9,13 +9,13 @@
 
 #### 1. MainActivity - Host Activity
 
-[!Splash](../HinhAnh/week5_main_activity_onCreate.PNG) 
+[!Splash1](../HinhAnh/week5_main_activity_onCreate.PNG) 
 
 #### 2. Splash Fragment - Host Fragment - Có Child Fragment là Onboarding1 Fragment
 
-[!Splash](../HinhAnh/week5_splash_flagment_onCreateView.PNG) 
+[!Splash2](../HinhAnh/week5_splash_flagment_onCreateView.PNG) 
 
-[!Splash](../HinhAnh/week5_splash_flagment_onStart.PNG) 
+[!Splash3](../HinhAnh/week5_splash_flagment_onStart.PNG) 
 
 #### 3. Onboarding1 Fragment - Child Fragment - Sẽ chuyển sang Onboarding2 khi người dùng chạm vào màn hình
 
