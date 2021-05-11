@@ -161,3 +161,49 @@ Tạo splash screen (sử dụng cấu hình android)
 - Tạo Android Project
   
 - Tạo các file layout tương ứng
+
+
+# Wee6: Network & JSON
+
+- challenge: https://drive.google.com/file/d/1ArE3O--isas9ptivGme9uVyowDWbtu_v/view?usp=sharing
+
+- slide: https://docs.google.com/presentation/d/1PlpvlF4ryKe3yJNm6vF1amCbhd7Vlrw9b8ek-CDqpDQ/edit?usp=sharing
+
+- demo code: https://github.com/namphho/W6_Network_json
+
+- link record: https://youtu.be/-KOjtWNjepk
+
+
+## **Target:**
+
+### 1. Chuẩn bị
+
+- Sử dụng lại source code của Week 5 - Fragment
+  
+### 2. Yêu Cầu
+
+- Bottom Nagivation sẽ có 2 tab: Top & Favorite (icon tùy chọn, màu sắc tùy chọn) => thay đổi thành
+"Now Playing & Top Rated"
+#### Bình, Anh, Quốc
+
+- Tab "Now Playing" gọi API để load dữ liệu tương ứng.
+  
+  - Tham khảo: https://developers.themoviedb.org/3/movies/get-now-playing
+
+- Tab "Top Rated" gọi API để load dữ liệu tương ứng
+  
+  - Tham khảo: https://developers.themoviedb.org/3/movies/get-top-rated-movies
+
+- Movie Item layout thiết kế tùy chọn (hình attached mang tính chất tham khảo):
+  
+![tutorial1](HinhAnh/huongdantuan6.PNG)
+#### Đạt, An
+
+- Ở mỗi tab cho phép người dùng chuyển đổi view dạng LIST & GRID
+  
+- Click vào một Item sẽ hiển thị màn hình details của bộ phim. (layout tùy chọn)
+
+### 3. Hướng dẫn
+
+- Link hình đầy đủ: https://image.tmdb.org/t/p/w500/ <<poster_path>>. ( giá trị của poster_path lấy
+trong json data).
