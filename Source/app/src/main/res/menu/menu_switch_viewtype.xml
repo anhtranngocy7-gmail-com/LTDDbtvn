@@ -3,11 +3,11 @@
 <item
     android:id="@+id/general"
     android:icon="@drawable/ic_tabler_icon_home"
-    android:title="Top"
+    android:title="Now Playing"
     ></item>
     <item
         android:id="@+id/favorite"
         android:icon="@drawable/ic_tabler_icon_heart"
-        android:title="Favorite"
+        android:title="Top Rated"
         ></item>
 </menu>
