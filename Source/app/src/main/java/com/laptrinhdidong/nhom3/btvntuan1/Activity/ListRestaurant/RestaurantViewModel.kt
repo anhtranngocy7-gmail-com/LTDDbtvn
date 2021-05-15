@@ -7,6 +7,8 @@ import com.laptrinhdidong.nhom3.btvntuan1.Information.Restaurant
 
 class RestaurantViewModel() : ViewModel() {
     var option_menu: Boolean = true
+    var times : Boolean =false
+    var option_type_view: Boolean =true
     var data: MutableList<Restaurant> = getDataSet()
     var data_favorite: MutableList<Restaurant> = getFavoriteSet()
 }

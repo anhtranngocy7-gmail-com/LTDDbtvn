@@ -18,7 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
-            tools:layout_editor_absoluteX="-16dp"></androidx.fragment.app.FragmentContainerView>
+            tools:layout_editor_absoluteX="-16dp">
+
+        </androidx.fragment.app.FragmentContainerView>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"

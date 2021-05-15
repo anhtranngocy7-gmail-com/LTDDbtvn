@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name"></string>
     <string name="underline"><u>Sign In</u></string>
+    <string-array name="Spinner_viewtype">
+        <item>Linear</item>
+        <item>Grid</item>
+    </string-array>
 </resources>
