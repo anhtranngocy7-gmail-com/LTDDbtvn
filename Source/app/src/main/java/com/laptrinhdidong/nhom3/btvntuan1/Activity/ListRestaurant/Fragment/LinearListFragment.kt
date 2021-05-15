@@ -35,7 +35,6 @@ class LinearListFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         rcvAdapter = RestaurantRcvAdapter(R.layout.nhom3_quoc_restaurant_item_view, requireContext())
-        rcvAdapter = RestaurantRcvAdapter(R.layout.nhom3_quoc_restaurant_item_view, requireContext())
         viewDataBinding.rcList.layoutManager = LinearLayoutManager(context)
         viewDataBinding.rcList.adapter = rcvAdapter
         rcvAdapter.data = viewModel.data

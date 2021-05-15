@@ -40,6 +40,7 @@
         android:layout_height="54dp"
         android:text="Our app can send you everywhere, even space. For only $2.99 per month"
         android:textAlignment="center"
+        android:textColor="#616772"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"

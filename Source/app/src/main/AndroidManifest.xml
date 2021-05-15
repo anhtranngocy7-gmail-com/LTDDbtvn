@@ -11,12 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Btvntuan1">
-        <activity android:name=".Activity.ListRestaurant.RestaurantActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".OnboardingOneActivity" />
         <activity android:name=".LoginActivity" />
@@ -24,6 +20,17 @@
         <activity android:name=".WelcomeActivity" />
         <activity android:name=".OnboardingthreeActivity" />
         <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".Activity.ListRestaurant.RestaurantActivity">
+
+        </activity>
+
+        <activity android:name=".Activity.MovieData.MovieActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity android:name=".ProfileActivity" />
     </application>
 

@@ -101,6 +101,7 @@
                 android:background="@drawable/inputbackground"
                 android:ems="16"
                 android:hint="Your email or phone"
+                android:textColor="@color/black"
                 android:inputType="textEmailAddress"
                 android:paddingVertical="20dp"
                 android:paddingStart="20dp"
@@ -126,6 +127,7 @@
                 android:background="@drawable/inputbackground"
                 android:ems="16"
                 android:hint="Password"
+                android:textColor="@color/black"
                 android:inputType="textPassword"
                 android:paddingVertical="20dp"
                 android:paddingStart="20dp"
@@ -183,15 +185,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="Don't have an account? "></TextView>
 
-                    <TextView
+                    <Button
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Sign up"
+                        android:background="@color/white"
+                        android:textAllCaps="false"
+                        android:id="@+id/btn_signup"
                         android:textColor="#FE724C">
 
-                    </TextView>
+                    </Button>
                 </LinearLayout>
 
                 <LinearLayout
@@ -204,6 +210,7 @@
 
                     <TextView
                         android:layout_width="wrap_content"
+                        android:textColor="@color/black"
                         android:layout_height="wrap_content"
                         android:text="Sign in with"></TextView>
                 </LinearLayout>

@@ -1,40 +1,23 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.CountDownTimer
 import android.util.Log
-import kotlinx.android.synthetic.main.nhom3_binh_splash.view.*
+import androidx.fragment.app.add
+import androidx.fragment.app.commit
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Welcome.SplashFragment
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.e("Splash", "Splash Activity _ onCreate")
-        setContentView(R.layout.nhom3_quoc_list_restaurant)
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Log.e("Splash", "Splash Activity _ onStart")
-
-        val timer = object : CountDownTimer(6000, 1000){
-            override fun onTick(millisUntilFinished: Long) {
-                Log.e("Splash", "Splash Activity _ onStart")
-            }
-
-            override fun onFinish() {
-                val intent = Intent(this@MainActivity, OnboardingOneActivity::class.java)
-                startActivity(intent)
-            }
+        setContentView(R.layout.activity_main)
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            add<SplashFragment>(R.id.frag_container_view)
         }
-        timer.start()
     }
 
-    override fun onResume() {
-        super.onResume()
-        Log.e("Splash", "Splash Activity _ onResume")
-    }
 }

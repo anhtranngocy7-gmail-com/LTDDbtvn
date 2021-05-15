@@ -111,3 +111,99 @@ Name
 - Address
   
 - PicturePath
+
+# Week 5: Fragment
+
+- challenge: https://drive.google.com/drive/folders/14Y7YYeg9v3lpzszb2lBPuLZGnTgYEJt-?usp=sharing
+  
+- slide: https://docs.google.com/presentation/d/1NcZ4ZqiNW4cqa0ZA4-ASLRL0KDPXwxQqu1-3ByUElY8/edit?usp=sharing
+  
+- demo code: https://github.com/namphho/W5Fragment
+  
+- link record: https://youtu.be/Q10GkWvIcEA
+
+**Target:**
+
+### 1. Tạo work-flow app: Bình, Đạt 
+
+- Splash -> OnBoarding (1, 2, 3)
+
+- OnBoarding -> Welcome
+  
+- Welcome -> SignUp or SignIn
+  
+- SignIn thành công hiển thị màn hình RestaurantListScreen (Thử thách W4)
+  
+**Gợi ý:**
+
+- Onboard, Welcome, SignUp, SignIn, RestaurantListScreen sử dụng fragment
+Tạo splash screen (sử dụng cấu hình android)
+
+### 2. Refactor Restaurant Screen: Quốc, An, Anh
+
+- Tạo bottom navigation (tham khảo UI bên dưới)
+
+- Bottom Nagivation sẽ có 2 tab: Top & Favorite (icon tùy chọn, màu sắc tùy chọn)
+  
+- Refactor Restaurant Item layout. có Icon Heart ở góc top-le0 (tham khảo UI bên dưới)
+
+**Yêu cầu:**
+
+- TOP tab hiển thị ds restaurant ( thử thách tuần 4)
+để "yêu thích" 1 restaurant => click "heart" icon => icon sáng. Click lần nữa => remove "yêu thích" => icon về trạng thái bình thường.
+
+- FAVORITE tab, hiển thị ds restaurants mà user "yêu thích".
+  
+**Hướng dẫn** 
+
+- Sử dụng file XD đính kèm để lấy color, icon, background
+  
+- Tạo Android Project
+  
+- Tạo các file layout tương ứng
+
+
+# Wee6: Network & JSON
+
+- challenge: https://drive.google.com/file/d/1ArE3O--isas9ptivGme9uVyowDWbtu_v/view?usp=sharing
+
+- slide: https://docs.google.com/presentation/d/1PlpvlF4ryKe3yJNm6vF1amCbhd7Vlrw9b8ek-CDqpDQ/edit?usp=sharing
+
+- demo code: https://github.com/namphho/W6_Network_json
+
+- link record: https://youtu.be/-KOjtWNjepk
+
+
+## **Target:**
+
+### 1. Chuẩn bị
+
+- Sử dụng lại source code của Week 5 - Fragment
+  
+### 2. Yêu Cầu
+
+- Bottom Nagivation sẽ có 2 tab: Top & Favorite (icon tùy chọn, màu sắc tùy chọn) => thay đổi thành
+"Now Playing & Top Rated"
+#### Bình, Anh, Quốc
+
+- Tab "Now Playing" gọi API để load dữ liệu tương ứng.
+  
+  - Tham khảo: https://developers.themoviedb.org/3/movies/get-now-playing
+
+- Tab "Top Rated" gọi API để load dữ liệu tương ứng
+  
+  - Tham khảo: https://developers.themoviedb.org/3/movies/get-top-rated-movies
+
+- Movie Item layout thiết kế tùy chọn (hình attached mang tính chất tham khảo):
+  
+![tutorial1](HinhAnh/huongdantuan6.PNG)
+#### Đạt, An
+
+- Ở mỗi tab cho phép người dùng chuyển đổi view dạng LIST & GRID
+  
+- Click vào một Item sẽ hiển thị màn hình details của bộ phim. (layout tùy chọn)
+
+### 3. Hướng dẫn
+
+- Link hình đầy đủ: https://image.tmdb.org/t/p/w500/ <<poster_path>>. ( giá trị của poster_path lấy
+trong json data).
