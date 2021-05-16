@@ -39,12 +39,12 @@ class LinearListFavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if(viewModel.option_type_view)
+        if(!viewModel.times_fragment)
         {
-            viewDataBinding.spinnerViewtype.setSelection(0)
+            ChangLayouManager(R.layout.nhom3_quoc_restaurant_item_view)
         }else
         {
-            viewDataBinding.spinnerViewtype.setSelection(1)
+            ChangLayouManager(R.layout.nhom3_an_restaurant_item_cardview)
         }
         onChangeViewType()
     }
@@ -91,6 +91,6 @@ class LinearListFavoriteFragment : Fragment() {
             }
         }
         viewDataBinding.rcList.adapter = rcvAdapter
-        rcvAdapter.data = viewModel.data
+        rcvAdapter.data = viewModel.getToprated()
     }
 }

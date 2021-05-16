@@ -29,6 +29,7 @@ class LinearListFragment() : Fragment() {
             container,
             false
         )
+
         return viewDataBinding.root
     }
 
@@ -37,6 +38,7 @@ class LinearListFragment() : Fragment() {
         rcvAdapter = RestaurantRcvAdapter(R.layout.nhom3_quoc_restaurant_item_view, requireContext())
         viewDataBinding.rcList.layoutManager = LinearLayoutManager(context)
         viewDataBinding.rcList.adapter = rcvAdapter
-        rcvAdapter.data = viewModel.data
+        rcvAdapter.data = viewModel.getNowplaying()
+        rcvAdapter.data = viewModel.getNowplaying()
     }
 }

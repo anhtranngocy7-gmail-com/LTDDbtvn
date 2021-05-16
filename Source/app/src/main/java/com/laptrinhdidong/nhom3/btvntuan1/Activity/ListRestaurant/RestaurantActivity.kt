@@ -23,7 +23,7 @@ class RestaurantActivity : AppCompatActivity() {
         viewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
         supportFragmentManager.commit {
             setReorderingAllowed(true)
-            if (viewModel.times==false) {
+            if (!viewModel.times) {
                 add<LinearListFragment>(R.id.fragment_mainapp)
                 addToBackStack(null)
             }
@@ -39,12 +39,10 @@ class RestaurantActivity : AppCompatActivity() {
 
                 when (item.itemId) {
                     R.id.general -> {
-                        replace<LinearListFragment>(R.id.fragment_mainapp)
-                        viewModel.option_menu = true
+                        add<LinearListFragment>(R.id.fragment_mainapp)
                     }
                     R.id.favorite -> {
                         replace<LinearListFavoriteFragment>(R.id.fragment_mainapp)
-                        viewModel.option_menu = false
                     }
                 }
                 addToBackStack(null)
