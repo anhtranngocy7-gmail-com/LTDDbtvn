@@ -16,7 +16,7 @@ import com.laptrinhdidong.nhom3.btvntuan1.R
 class MovieRcvAdapter(ItemViewLayout: Int, ctx: Context, listener: OnItemClickListener) :
     RecyclerView.Adapter<MovieRcvAdapter.ViewHolder>() {
     private var listener : OnItemClickListener = listener
-    private var item_view: Int = ItemViewLayout
+    private var itemViewAdapt: Int = ItemViewLayout
     private var context: Context = ctx
     var data = mutableListOf<Movie>()
         set(value) {
@@ -27,7 +27,7 @@ class MovieRcvAdapter(ItemViewLayout: Int, ctx: Context, listener: OnItemClickLi
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         var layoutInflater = LayoutInflater.from(parent.context)
-        var view = layoutInflater.inflate(item_view, parent, false)
+        var view = layoutInflater.inflate(itemViewAdapt, parent, false)
         return ViewHolder(view)
     }
 
@@ -38,7 +38,7 @@ class MovieRcvAdapter(ItemViewLayout: Int, ctx: Context, listener: OnItemClickLi
         holder.tvAddress.text = "Rate: "+item.voteAverage.toString()
         var strtemp="https://image.tmdb.org/t/p/w500"+item.backdropPath
         Glide.with(context).load(strtemp).centerCrop().placeholder(R.drawable.loading_icon).into(holder.imageAvatar)
-        holder.ww.setOnClickListener{
+        holder.itemV.setOnClickListener{
             listener.onItemClick(item)
         }
     }
@@ -53,7 +53,7 @@ class MovieRcvAdapter(ItemViewLayout: Int, ctx: Context, listener: OnItemClickLi
         val tvName = itemView.findViewById<TextView>(R.id.tvName)
         val tvAddress = itemView.findViewById<TextView>(R.id.tvAddress)
         val imageAvatar = itemView.findViewById<ImageView>(R.id.imageView9)
-        val ww=itemView
+        val itemV=itemView
     }
 
 }

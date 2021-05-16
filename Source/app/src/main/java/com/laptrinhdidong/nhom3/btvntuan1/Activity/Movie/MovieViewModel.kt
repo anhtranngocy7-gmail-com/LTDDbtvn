@@ -11,8 +11,7 @@ import kotlinx.coroutines.launch
 
 class MovieViewModel() : ViewModel() {
     var times : Boolean =false
-    var times_fragment : Boolean =false
-    var option_type_view: Boolean =false
+    var optionTypeView: Boolean =false
     
     fun getNowplaying() : LiveData<MutableList<Movie>>
     {
@@ -30,8 +29,8 @@ class MovieViewModel() : ViewModel() {
     {
         val tmp = MutableLiveData<MutableList<Movie>>()
         viewModelScope.launch {
-            val toprateRest = RestClient.getInstance().API.listTopRated(language = "en-US",page = 1)
-            val result = toprateRest.results.toMutableList()
+            val topRateRest = RestClient.getInstance().API.listTopRated(language = "en-US",page = 1)
+            val result = topRateRest.results.toMutableList()
             tmp.postValue(result)
             Log.e("localtop",tmp.toString())
         }
