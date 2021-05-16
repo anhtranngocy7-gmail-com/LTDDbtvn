@@ -41,7 +41,7 @@ class TopMovieFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if (!viewModel.option_type_view) {
+        if (!viewModel.optionTypeView) {
             ChangLayouManager(R.layout.nhom3_quoc_restaurant_item_view)
         } else {
             ChangLayouManager(R.layout.nhom3_an_restaurant_item_cardview)
@@ -84,7 +84,7 @@ class TopMovieFragment : Fragment(), OnItemClickListener {
                     this
                 )
                 viewDataBinding.rcList.layoutManager = LinearLayoutManager(context)
-                viewModel.option_type_view = true
+                viewModel.optionTypeView = true
             }
 
             R.layout.nhom3_an_restaurant_item_cardview -> {
@@ -94,7 +94,7 @@ class TopMovieFragment : Fragment(), OnItemClickListener {
                     this
                 )
                 viewDataBinding.rcList.layoutManager = GridLayoutManager(requireContext(), 2)
-                viewModel.option_type_view = false
+                viewModel.optionTypeView = false
             }
         }
         viewDataBinding.rcList.adapter = rcvAdapter
