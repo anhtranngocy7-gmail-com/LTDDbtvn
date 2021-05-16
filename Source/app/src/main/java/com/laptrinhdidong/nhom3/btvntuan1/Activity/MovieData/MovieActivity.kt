@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.laptrinhdidong.nhom3.btvntuan1.R
+import android.util.Log
 
 class MovieActivity:AppCompatActivity() {
     lateinit var movieViewmodel: MovieViewModel
@@ -13,11 +14,13 @@ class MovieActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nhom3_anh_movie)
         movieViewmodel = ViewModelProvider(this).get(MovieViewModel::class.java)
+
     }
 
     override fun onStart() {
         super.onStart()
         movieViewmodel.getNowplaying()
-        movieViewmodel.getToprated()
+    //    movieViewmodel.getToprated()
+
     }
 }
