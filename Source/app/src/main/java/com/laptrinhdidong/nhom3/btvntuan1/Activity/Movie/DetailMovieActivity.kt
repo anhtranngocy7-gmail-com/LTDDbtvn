@@ -1,11 +1,9 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.MovieData.MovieViewModel
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3datActivityDetailBinding
 import kotlinx.android.synthetic.main.nhom3dat_activity_detail.*

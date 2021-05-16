@@ -12,7 +12,7 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
 import com.laptrinhdidong.nhom3.btvntuan1.*
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantActivity
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.ListMovieActivity
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.SignUp.SignUpFragment
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3AnLoginBinding
 import kotlinx.android.synthetic.main.nhom3_an_login.*
@@ -38,7 +38,7 @@ class LoginFragment:Fragment() {
                 var check_login : Int =viewModel.checkLogin(binding)
                 if(check_login!=-1)
                 {
-                    val intent = Intent(context,RestaurantActivity::class.java)
+                    val intent = Intent(context,ListMovieActivity::class.java)
                     startActivity(intent)
                 }else
                 {

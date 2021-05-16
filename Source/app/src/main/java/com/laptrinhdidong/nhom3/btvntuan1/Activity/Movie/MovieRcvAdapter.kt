@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -13,8 +13,8 @@ import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 
-class RestaurantRcvAdapter(ItemViewLayout: Int, ctx: Context, listener: OnItemClickListener) :
-    RecyclerView.Adapter<RestaurantRcvAdapter.ViewHolder>() {
+class MovieRcvAdapter(ItemViewLayout: Int, ctx: Context, listener: OnItemClickListener) :
+    RecyclerView.Adapter<MovieRcvAdapter.ViewHolder>() {
     private var listener : OnItemClickListener = listener
     private var item_view: Int = ItemViewLayout
     private var context: Context = ctx

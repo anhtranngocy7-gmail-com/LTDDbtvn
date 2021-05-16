@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,22 +9,22 @@ import androidx.fragment.app.commit
 import androidx.fragment.app.replace
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment.LinearListFavoriteFragment
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment.LinearListFragment
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.Fragment.TopMovieFragment
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.Fragment.PlayingMovieFragment
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.ActivityRestaurantBinding
 
-class RestaurantActivity : AppCompatActivity() {
+class ListMovieActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRestaurantBinding
-    private lateinit var viewModel: RestaurantViewModel
+    private lateinit var viewModel: MovieViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_restaurant)
-        viewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
         supportFragmentManager.commit {
             setReorderingAllowed(true)
             if (!viewModel.times) {
-                add<LinearListFragment>(R.id.fragment_mainapp)
+                add<PlayingMovieFragment>(R.id.fragment_mainapp)
                 addToBackStack(null)
             }
         }
@@ -38,10 +38,10 @@ class RestaurantActivity : AppCompatActivity() {
 
                 when (item.itemId) {
                     R.id.general -> {
-                        replace<LinearListFragment>(R.id.fragment_mainapp)
+                        replace<PlayingMovieFragment>(R.id.fragment_mainapp)
                     }
                     R.id.favorite -> {
-                        replace<LinearListFavoriteFragment>(R.id.fragment_mainapp)
+                        replace<TopMovieFragment>(R.id.fragment_mainapp)
                     }
                 }
                 addToBackStack(null)

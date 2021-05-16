@@ -1,18 +1,15 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.laptrinhdidong.nhom3.btvntuan1.DataStore.getDataSet
-import com.laptrinhdidong.nhom3.btvntuan1.DataStore.getFavoriteSet
-import com.laptrinhdidong.nhom3.btvntuan1.Information.Restaurant
 import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.rest.RestClient
 import kotlinx.coroutines.launch
 
-class RestaurantViewModel() : ViewModel() {
+class MovieViewModel() : ViewModel() {
     var times : Boolean =false
     var times_fragment : Boolean =false
     var option_type_view: Boolean =false

@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment
+package com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.Fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,32 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.DetailMovieActivity
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantRcvAdapter
-import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantViewModel
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.DetailMovieActivity
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.MovieRcvAdapter
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.MovieViewModel
 import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.OnItemClickListener
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBinding
-import kotlinx.android.synthetic.main.nhom3dat_activity_detail.*
 
-class LinearListFavoriteFragment : Fragment(), OnItemClickListener {
+class TopMovieFragment : Fragment(), OnItemClickListener {
     private lateinit var viewDataBinding: Nhom3QuocListRestaurantBinding
-    private lateinit var viewModel: RestaurantViewModel
-    private lateinit var rcvAdapter: RestaurantRcvAdapter
+    private lateinit var viewModel: MovieViewModel
+    private lateinit var rcvAdapter: MovieRcvAdapter
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        viewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(MovieViewModel::class.java)
         viewDataBinding = DataBindingUtil.inflate<Nhom3QuocListRestaurantBinding>(
             inflater,
             R.layout.nhom3_quoc_list_restaurant,
@@ -80,7 +78,7 @@ class LinearListFavoriteFragment : Fragment(), OnItemClickListener {
     fun ChangLayouManager(itemview: Int) {
         when (itemview) {
             R.layout.nhom3_quoc_restaurant_item_view -> {
-                rcvAdapter = RestaurantRcvAdapter(
+                rcvAdapter = MovieRcvAdapter(
                     R.layout.nhom3_quoc_restaurant_item_view,
                     requireContext(),
                     this
@@ -90,7 +88,7 @@ class LinearListFavoriteFragment : Fragment(), OnItemClickListener {
             }
 
             R.layout.nhom3_an_restaurant_item_cardview -> {
-                rcvAdapter = RestaurantRcvAdapter(
+                rcvAdapter = MovieRcvAdapter(
                     R.layout.nhom3_an_restaurant_item_cardview,
                     requireContext(),
                     this
