@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.DetailMovieActivity
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.MovieRcvAdapter
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.Movie.MovieViewModel
-import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
+import com.laptrinhdidong.nhom3.btvntuan1.Model.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.OnItemClickListener
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBinding
