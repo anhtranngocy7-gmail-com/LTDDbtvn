@@ -3,7 +3,7 @@ package com.laptrinhdidong.nhom3.btvntuan1.Movie
 data class MovieResp (
     val dates: Dates,
     val page: Long,
-    val results: MutableList<Movie>,
+    val results: List<Movie>,
     val totalPages: Long,
     val totalResults: Long
 )

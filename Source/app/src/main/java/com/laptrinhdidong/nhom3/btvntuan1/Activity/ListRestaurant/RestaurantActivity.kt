@@ -31,7 +31,6 @@ class RestaurantActivity : AppCompatActivity() {
         viewModel.times=true
         BindingOnchangeOption()
     }
-
     private fun BindingOnchangeOption() {
         binding.bottomNavigationView.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item: MenuItem ->
             supportFragmentManager.commit {
@@ -39,7 +38,7 @@ class RestaurantActivity : AppCompatActivity() {
 
                 when (item.itemId) {
                     R.id.general -> {
-                        add<LinearListFragment>(R.id.fragment_mainapp)
+                        replace<LinearListFragment>(R.id.fragment_mainapp)
                     }
                     R.id.favorite -> {
                         replace<LinearListFavoriteFragment>(R.id.fragment_mainapp)

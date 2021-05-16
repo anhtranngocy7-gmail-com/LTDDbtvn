@@ -13,11 +13,22 @@ class MovieActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.nhom3_anh_movie)
         movieViewmodel = ViewModelProvider(this).get(MovieViewModel::class.java)
+        movieViewmodel.getNowplaying()
+        movieViewmodel.getToprated()
+        movieViewmodel.getNowplaying2().toString()
     }
 
     override fun onStart() {
         super.onStart()
         movieViewmodel.getNowplaying()
         movieViewmodel.getToprated()
+        movieViewmodel.getNowplaying2().toString()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        movieViewmodel.getNowplaying()
+        movieViewmodel.getToprated()
+        movieViewmodel.getNowplaying2().toString()
     }
 }
