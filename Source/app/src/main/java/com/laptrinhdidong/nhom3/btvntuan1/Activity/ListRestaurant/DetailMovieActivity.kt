@@ -15,20 +15,15 @@ class DetailMovieActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.nhom3dat_activity_detail)
-<<<<<<< HEAD
-        binding.movieRate.text= "8.7"
-
-        Glide.with(this).load("link ảnh").centerCrop().placeholder(R.drawable.loading_icon).into(binding.moviePoster)
-=======
 
         val intent = getIntent()
         val bundle = intent.getExtras()
         if(bundle != null) {
-            val language = bundle.getString("KEY_LANGUAGE")
-            binding.movieLanguage.text = language
+            val viewmovie= bundle.getString("KEY_VIEW")
+            binding.movieLanguage.text = viewmovie
 
-            val poster = bundle.getString("KEY_POSTER")
-            Glide.with(this).load("https://image.tmdb.org/t/p/w500" + poster).centerCrop().placeholder(R.drawable.loading_icon).into(binding.moviePoster)
+            val poster ="https://image.tmdb.org/t/p/w500" + bundle.getString("KEY_POSTER")
+            Glide.with(this).load( poster).centerCrop().placeholder(R.drawable.loading_icon).into(binding.moviePoster)
 
             val title = bundle.getString("KEY_TITLE")
             binding.textView5.text = title
@@ -42,7 +37,5 @@ class DetailMovieActivity : AppCompatActivity() {
 
         }
 
-
->>>>>>> c563922f237477203ef7ec0e4ba1e5f6ba1bd318
     }
 }

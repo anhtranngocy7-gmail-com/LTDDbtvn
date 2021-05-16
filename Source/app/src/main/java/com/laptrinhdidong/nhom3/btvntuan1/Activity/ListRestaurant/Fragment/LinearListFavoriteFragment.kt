@@ -103,11 +103,12 @@ class LinearListFavoriteFragment : Fragment(), OnItemClickListener {
         Toast.makeText(requireContext(),movie.title.toString(),Toast.LENGTH_SHORT).show()
         val intent = Intent(context, DetailMovieActivity::class.java)
         val bundle = Bundle()
-        bundle.putString("KEY_LANGUAGE", movie.originalLanguage.toString())
+        bundle.putString("KEY_VIEW", movie.popularity.toString())
         bundle.putString("KEY_TITLE", movie.originalTitle.toString())
         bundle.putString("KEY_RATE", movie.voteAverage.toString())
         bundle.putString("KEY_POSTER", movie.posterPath.toString())
         bundle.putString("KEY_OVERVIEW", movie.overview.toString())
+        intent.putExtras(bundle)
         startActivity(intent)
     }
 }
