@@ -12,14 +12,29 @@
         android:layout_height="match_parent"
         android:background="@color/white">
 
+        <Spinner
+            android:id="@+id/spinner_viewtype"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/nav_mainback"
+            android:foregroundGravity="center"
+            android:gravity="center"
+            android:entries="@array/Spinner_viewtype"
+            android:layout_marginTop="5dp"
+            android:popupBackground="@color/nav_mainback"
+            android:spinnerMode="dropdown"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></Spinner>
         <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="25dp"
             android:id="@+id/rcList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spinner_viewtype"
             android:background="@color/white"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
