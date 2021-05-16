@@ -45,65 +45,69 @@ class LinearListFragment() : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        if(!viewModel.option_type_view)
-        {
+        if (!viewModel.option_type_view) {
             ChangLayouManager(R.layout.nhom3_quoc_restaurant_item_view)
-        }else
-        {
+        } else {
             ChangLayouManager(R.layout.nhom3_an_restaurant_item_cardview)
         }
         onChangeViewType()
     }
-    fun onChangeViewType()
-    {
-        viewDataBinding.spinnerViewtype.onItemSelectedListener=object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                when(position)
-                {
-                    0 -> {
-                        ChangLayouManager(R.layout.nhom3_quoc_restaurant_item_view)
-                    }
-                    1 ->{
-                        ChangLayouManager(R.layout.nhom3_an_restaurant_item_cardview)
+
+    fun onChangeViewType() {
+        viewDataBinding.spinnerViewtype.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    when (position) {
+                        0 -> {
+                            ChangLayouManager(R.layout.nhom3_quoc_restaurant_item_view)
+                        }
+                        1 -> {
+                            ChangLayouManager(R.layout.nhom3_an_restaurant_item_cardview)
+                        }
                     }
                 }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
+
             }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-        }
     }
-    fun ChangLayouManager(itemview :Int)
-    {
-        when(itemview)
-        {
-            R.layout.nhom3_quoc_restaurant_item_view ->{
-                rcvAdapter = RestaurantRcvAdapter(R.layout.nhom3_quoc_restaurant_item_view, requireContext(),this)
+
+    fun ChangLayouManager(itemview: Int) {
+        when (itemview) {
+            R.layout.nhom3_quoc_restaurant_item_view -> {
+                rcvAdapter = RestaurantRcvAdapter(
+                    R.layout.nhom3_quoc_restaurant_item_view,
+                    requireContext(),
+                    this
+                )
                 viewDataBinding.rcList.layoutManager = LinearLayoutManager(context)
-                viewModel.option_type_view=true
+                viewModel.option_type_view = true
             }
 
-            R.layout.nhom3_an_restaurant_item_cardview ->{
-                rcvAdapter = RestaurantRcvAdapter(R.layout.nhom3_an_restaurant_item_cardview, requireContext(),this)
-                viewDataBinding.rcList.layoutManager = GridLayoutManager(requireContext(),2)
-                viewModel.option_type_view=false
+            R.layout.nhom3_an_restaurant_item_cardview -> {
+                rcvAdapter = RestaurantRcvAdapter(
+                    R.layout.nhom3_an_restaurant_item_cardview,
+                    requireContext(),
+                    this
+                )
+                viewDataBinding.rcList.layoutManager = GridLayoutManager(requireContext(), 2)
+                viewModel.option_type_view = false
             }
         }
         viewDataBinding.rcList.adapter = rcvAdapter
         viewModel.getNowplaying().observe(viewLifecycleOwner, Observer { result ->
-            rcvAdapter.data=result
+            rcvAdapter.data = result
         })
     }
 
     override fun onItemClick(movie: Movie) {
-        Toast.makeText(requireContext(),movie.title.toString(), Toast.LENGTH_SHORT).show()
         val intent = Intent(context, DetailMovieActivity::class.java)
         val bundle = Bundle()
         bundle.putString("KEY_VIEW", movie.popularity.toString())
