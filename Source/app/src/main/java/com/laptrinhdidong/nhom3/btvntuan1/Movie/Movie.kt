@@ -33,6 +33,7 @@ data class Movie (
 
     @SerializedName(value = "vote_count")
     val voteCount: Long?= null
+
 )
 
 enum class OriginalLanguage {
