@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Movie
+package com.laptrinhdidong.nhom3.btvntuan1.Model
 
 data class MovieResp (
     val dates: Dates,

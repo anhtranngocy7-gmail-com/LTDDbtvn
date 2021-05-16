@@ -1,6 +1,6 @@
 package com.laptrinhdidong.nhom3.btvntuan1
 
-import com.laptrinhdidong.nhom3.btvntuan1.Information.Restaurant
+import com.laptrinhdidong.nhom3.btvntuan1.Model.Restaurant
 
 object DataStore {
     private var list: MutableList<Account> = mutableListOf()
@@ -238,7 +238,7 @@ object DataStore {
         val listfavorite = mutableListOf<Restaurant>()
         for(item in DataStore.getDataSet())
         {
-            if(item.Favorite)
+            if(item.favorite)
             {
                 listfavorite.add(item)
             }
@@ -247,6 +247,6 @@ object DataStore {
     }
     fun setFavorite(favorite: Boolean, item_R: Restaurant){
         var index:Int=listRestaurant.indexOf(item_R)
-        listRestaurant[index].Favorite=favorite
+        listRestaurant[index].favorite=favorite
     }
 }

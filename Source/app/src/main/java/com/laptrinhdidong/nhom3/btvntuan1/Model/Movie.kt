@@ -1,4 +1,4 @@
-package com.laptrinhdidong.nhom3.btvntuan1.Movie
+package com.laptrinhdidong.nhom3.btvntuan1.Model
 
 import com.google.gson.annotations.SerializedName
 

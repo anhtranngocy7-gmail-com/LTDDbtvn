@@ -3,7 +3,7 @@ package com.laptrinhdidong.nhom3.btvntuan1.Activity.MovieData
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
+import com.laptrinhdidong.nhom3.btvntuan1.Model.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.rest.RestClient
 import kotlinx.coroutines.launch
 

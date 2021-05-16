@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.laptrinhdidong.nhom3.btvntuan1.OnItemClickListener
-import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
+import com.laptrinhdidong.nhom3.btvntuan1.Model.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.R
 
 
