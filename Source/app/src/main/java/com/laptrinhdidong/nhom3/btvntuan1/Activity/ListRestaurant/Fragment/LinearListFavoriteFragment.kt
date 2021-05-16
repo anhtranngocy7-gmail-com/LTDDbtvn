@@ -1,5 +1,6 @@
 package com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,12 +13,14 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.DetailMovieActivity
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantRcvAdapter
 import com.laptrinhdidong.nhom3.btvntuan1.Activity.ListRestaurant.RestaurantViewModel
 import com.laptrinhdidong.nhom3.btvntuan1.Movie.Movie
 import com.laptrinhdidong.nhom3.btvntuan1.OnItemClickListener
 import com.laptrinhdidong.nhom3.btvntuan1.R
 import com.laptrinhdidong.nhom3.btvntuan1.databinding.Nhom3QuocListRestaurantBinding
+import kotlinx.android.synthetic.main.nhom3dat_activity_detail.*
 
 class LinearListFavoriteFragment : Fragment(), OnItemClickListener {
     private lateinit var viewDataBinding: Nhom3QuocListRestaurantBinding
@@ -98,5 +101,13 @@ class LinearListFavoriteFragment : Fragment(), OnItemClickListener {
     }
     override fun onItemClick(movie: Movie) {
         Toast.makeText(requireContext(),movie.title.toString(),Toast.LENGTH_SHORT).show()
+        val intent = Intent(context, DetailMovieActivity::class.java)
+        val bundle = Bundle()
+        bundle.putString("KEY_LANGUAGE", movie.originalLanguage.toString())
+        bundle.putString("KEY_TITLE", movie.originalTitle.toString())
+        bundle.putString("KEY_RATE", movie.voteAverage.toString())
+        bundle.putString("KEY_POSTER", movie.posterPath.toString())
+        bundle.putString("KEY_OVERVIEW", movie.overview.toString())
+        startActivity(intent)
     }
 }
